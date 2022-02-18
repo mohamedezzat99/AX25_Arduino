@@ -1,0 +1,7 @@
+#org-eclipse-ui-splash-progressText {
+  color: #C8D5EA;
+}
+
+#org-eclipse-ui-splash-progressPart {
+  background-image: url('me-custom:/platform:/plugin/io.sloeber.application/splash.bmp');
+}

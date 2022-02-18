@@ -1,0 +1,7 @@
+Build\ before\ upload\ option=TRUE
+Clean\ Serial\ Monitor\ after\ upload=false
+FmStatus=1
+Open\ serial\ connections\ with\ the\ monitor=true
+Serial\ monitor\ last\ selected\ Port=COM3
+Serial\ monitor\ last\ selected\ rate=9600
+eclipse.preferences.version=1

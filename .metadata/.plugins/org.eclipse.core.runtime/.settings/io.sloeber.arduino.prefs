@@ -1,0 +1,14 @@
+Automatically\ import\ libraries=true
+FbStatus=54
+FsStatus=3
+FuStatus=44
+Last\ Used\ Upload\ port=COM3
+Last\ used\ Board=uno
+Last\ used\ Boards\ file=${SLOEBER_HOME}\\arduinoPlugin\\packages\\arduino\\hardware\\avr\\1.8.4\\boards.txt
+Last\ used\ Examples=
+Private\ Library\ Path=C\:/Users/Mohamed Ezzat/Documents/Arduino/libraries
+Private\ hardware\ Path=C\:/Users/Mohamed Ezzat/Documents/Arduino/hardware
+eclipse.preferences.version=1
+last\ Used\ upload\ Protocol=Default
+last\ used\ Board\ custom\ option\ selections=
+sloeber.TEMPLATE_USE_DEFAULT=defaultIno

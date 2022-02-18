@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;firstArduino/AX25_CRC.c&apos; to &apos;AX25_CRC.ino&apos;" description="Rename resource &apos;AX25_CRC.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="AX25_CRC.c" name="AX25_CRC.ino" stamp="1645099250709" updateReferences="true"/>
+</session>
