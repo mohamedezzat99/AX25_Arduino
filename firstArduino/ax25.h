@@ -77,7 +77,7 @@ typedef enum{
  *              Function Prototypes            *
  ***********************************************/
 void AX25_buildFrame(uint8 *, uint8 *, uint16 * , uint8 *, uint8, uint8);
-uint8 AX25_deFrame(uint8*, uint16, uint8);
+void AX25_deFrame(uint8*, uint16, uint8);
 uint8 AX25_getControl(frameType frameType, frameSecondaryType secondaryType, uint8 NS, uint8 NR, uint8 pollFinal);
 void AX25_Manager(uint8 *);
 void AX25_getInfo(uint8 * info);

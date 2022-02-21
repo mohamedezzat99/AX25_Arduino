@@ -34,7 +34,8 @@ extern uint8 info[SSP_FRAME_MAX_SIZE];
 
 extern  uint8 g_infoSize;
 extern uint8 flag_SerialTXBuffer;
-
+extern uint8 flag_SerialRXBuffer;
+extern uint8 flag_next_frame;
 
 /* -------------------- TX Functions --------------------*/
 
@@ -135,11 +136,11 @@ void AX25_Manager(uint8* a_control){
 
 
   /*---------------------------------------- 3rd trial ----------------------------------------*/
-for (int var = 0; var < 2; ++var) {
   switch(state){
   case idle:
     /*----------------------- TX part -----------------------*/
     if((flag_SSP_to_Control == FULL && flag_Control_to_Framing == EMPTY)){
+    	Serial.print("\nIdle tx part\n");
       for (i = 0; i < SIZE_SSP_to_Control_Buffer; i++) {
         info[i] = SSP_to_Control_Buffer[i];
       }
@@ -155,8 +156,8 @@ for (int var = 0; var < 2; ++var) {
     /*----------------------- RX part -----------------------*/
 
     if((flag_Control_to_SSP == EMPTY && flag_Deframing_to_Control == FULL)){
-      /* nmla el fo2o b3adha n3ml flag clear */
-      /* TODO: flag_Deframing_to_Control = EMPTY; */
+    	Serial.print("\nIdle rx part\n");
+
 
       for(i=0; i<ADDR_LEN; i++){
         if(g_received_address[i] != myAddress[i])
@@ -174,7 +175,6 @@ for (int var = 0; var < 2; ++var) {
           Control_To_SSP[i] = g_info_reciver[i];
         }
 
-        flag_Deframing_to_Control = EMPTY; /* clears Buffer after copying data in it */
         state = RX;
       }
     }
@@ -182,6 +182,7 @@ for (int var = 0; var < 2; ++var) {
 
   case TX:
     if(flag_Deframing_to_Control == FULL){
+    	Serial.print("\n TX State \n");
 
       received_control = g_control_recived[0];
 
@@ -189,14 +190,23 @@ for (int var = 0; var < 2; ++var) {
       if((received_control && 0x01) == 0){
 
         /* type is I frame */
+    	  Serial.print("\nI frame\n");
         g_Received_NR = (received_control & 0xE0)>> 5;
         Received_NS = (received_control & 0x0E) >> 1;
         Received_PollFinal = (received_control & 0x10) >> 4; /* TODO: check if it should be Poll or PollFinal */
+
+        /*TODO: send info field to upper layer*/
+        /*TODO: check from Dr since we already copy I frame in RX part above by few lines */
+        /* copy array to upper layer */
+        for (i = 0; i < SSP_FRAME_MAX_SIZE; i++) {
+          Control_To_SSP[i] = g_info_reciver[i];
+        }
+
       }
       else if((received_control && 0x03) == 1){
 
         /* type is S frame */
-
+    	  Serial.print("\nS frame\n");
         g_Received_NR = (received_control & 0xE0)>> 5;
         Received_PollFinal = (received_control & 0x10) >> 4;
         Received_Sbits = (received_control & 0x0C) >> 2;
@@ -224,34 +234,35 @@ for (int var = 0; var < 2; ++var) {
           flag_Status = REJECT;
           state = idle;
         }
+
+         flag_next_frame = FULL ;
       }
       else{
 
         /* type is U frame */
+    	  Serial.print("\nU frame\n");
         Received_Mbits = (received_control & 0xEC)>> 2;
         Received_PollFinal = (received_control & 0x10) >> 4;
       }
+      flag_Deframing_to_Control = EMPTY;
     }
  //   state = idle;
 
     break;
 
   case RX:
-
+  	Serial.print("\n RX State \n");
+  	flag_Deframing_to_Control = EMPTY;	/* clears Buffer after copying data in it */
 
     /* Generate Required Control Byte */
-
-    /*TODO: check if this part should be here or after the if condition above */
-    //Serial.println(NS);
     NS = VS;
     if (VS < 7) {
       VS++;
     } else {
       VS = 0;
     }
-    //Serial.println(NS);
-    /* check on CRC flag (in deframe function) if True make RR if False make REJ */
 
+    /* check on CRC flag (in deframe function) if True make RR if False make REJ */
     if(flag_RX_crc == SET){
       *a_control = AX25_getControl(S, RR, NS, g_Received_NR, pollfinal);
     } else{
@@ -269,15 +280,12 @@ for (int var = 0; var < 2; ++var) {
       addr[i] = myAddress[i];
     }
 
-
-    /* */
     flag_Control_to_Framing = FULL;
 
     state = idle;
 
     break;
   }
-}
   /*---------------------------------------- 3rd trial ----------------------------------------*/
 
 #if 0
@@ -287,7 +295,6 @@ for (int var = 0; var < 2; ++var) {
 
     /* start TX */
 
-    /* clear buffer : TODO which buffer? */
 
     for (i = 0; i < SIZE_SSP_to_Control_Buffer; i++) {
       SSP_to_Control_Buffer_Copy[i]=SSP_to_Control_Buffer[i];
@@ -305,7 +312,6 @@ for (int var = 0; var < 2; ++var) {
 
     /* start RX */
 
-    /* clear buffer : TODO which buffer? */
 
     for (i = 0; i < AX25_FRAME_MAX_SIZE; i++) {
       Deframing_To_Control_Buffer_Copy[i] = Deframing_To_Control_Buffer[i];
@@ -323,7 +329,6 @@ for (int var = 0; var < 2; ++var) {
 
     /* cont TX */
 
-    /* TODO: check if S frame also check address */
 
     prev_state = idle;
 
@@ -335,7 +340,7 @@ for (int var = 0; var < 2; ++var) {
 
     prev_state = idle;
 
-    *a_control = AX25_getControl(S, RR, NS, g_Received_NR, pollfinal); /* TODO: make S and RR variables */
+    *a_control = AX25_getControl(S, RR, NS, g_Received_NR, pollfinal);
 
     /* call function? AX25_buildFrame(buffer, info, frameSize, ADDR, control, infoSize); */
 
@@ -362,7 +367,6 @@ for (int var = 0; var < 2; ++var) {
 
   /* --------------------------- End of TX part ---------------------------*/
 
-  /*TODO: after transmitting I frame how do i wait for receiving RR frame? */
 
 
 
@@ -374,7 +378,7 @@ for (int var = 0; var < 2; ++var) {
 
     g_Received_NR = (control & 0xE0) >> 5;
     NS = (control & 0x0E) >> 1;
-    PollFinal = (control & 0x10) >> 4; /* TODO: check if it should be Poll or PollFinal */
+    PollFinal = (control & 0x10) >> 4;
 
     //    AX25_Manager_TX();
 
@@ -392,7 +396,7 @@ for (int var = 0; var < 2; ++var) {
       /*
        * The RR frame is used to:
        *  Indicate that the sender of the RR is now able to receive more "I" frames.
-       *  Acknowledge the proper reception of "I" frames up to "N(R)-1". TODO: check how to implement this line
+       *  Acknowledge the proper reception of "I" frames up to "N(R)-1".
        *  Clear a previously busy condition.
        */
 
@@ -406,7 +410,7 @@ for (int var = 0; var < 2; ++var) {
 
       /*
        * The RNR frame is used to indicate that the station is temporarily busy and cannot accept more "I" frames.
-       * Frames up to "N(R)-1" are acknowledged. TODO: check how to implement this line
+       * Frames up to "N(R)-1" are acknowledged.
        * Frames N(R) and above that may have been transmitted are discarded and must be retransmitted again.
        */
 
@@ -493,7 +497,6 @@ void AX25_buildFrame(uint8 *buffer, uint8 *info, uint16 *frameSize, uint8 *ADDR,
   flag_SerialTXBuffer = FULL;
 }
 
-/* TODO:remind Eng. Ahmed to make bit-stuffing mask */
 
 
 /*
@@ -510,7 +513,7 @@ void AX25_buildFrame(uint8 *buffer, uint8 *info, uint16 *frameSize, uint8 *ADDR,
  *
  */
 
-uint8 AX25_deFrame(uint8 *buffer, uint16 frameSize, uint8 infoSize) {
+void AX25_deFrame(uint8 *buffer, uint16 frameSize, uint8 infoSize) {
   uint8 newbuffer[AX25_FRAME_MAX_SIZE]; // this was set to frameSize, i changed it to AX25_FRAME_MAX_SIZE to test it.
   uint16 crc;
   uint8 *ptrz;
@@ -537,13 +540,13 @@ uint8 AX25_deFrame(uint8 *buffer, uint16 frameSize, uint8 infoSize) {
 //      g_padding_recived[j] = newbuffer[i];
     }
     flag_Deframing_to_Control = FULL;
+    flag_SerialRXBuffer = EMPTY;
     crc = computeCRC(newbuffer, &i);
     ptrz++;
     if (*ptrz == newbuffer[i]) {
       i++;
       ptrz--;
       if (*ptrz == newbuffer[i]) {
-        /*TODO: make flag RX_CRC (True or False) */
         flag_RX_crc = SET;
         i++;
         printf("\n**received frame**\n");
@@ -632,10 +635,8 @@ void AX25_prepareIFrame(TX_FRAME *frame, uint8 control) {
 
   SSID_OctetSource |= (1 << 0); /* set X bit */
   SSID_OctetSource |= ((SSIDSource & 0x0F) << 1); /* insert SSID into the SSID octet */
-  /* todo: insert C bit*/
 
   SSID_OctetDest |= (SSIDDest << 1); /* insert SSID into the SSID octet */
-  /* todo: insert C bit*/
 
   for (uint16 i = 0; i < ADDR_L; i++) {
     frame->address[i] = AX25_txAddressField[i];
@@ -674,7 +675,6 @@ IframeControlField(TX_FRAME *frame) {
 SframeControlField(TX_FRAME *frame) {
   frame->control = 1; /* to initially make two LSB = 01 */
   frame->control = (frame->control & 0x1F) | ((NR << 5) & 0xE0); /* insert N(R) into control field */
-  /* todo: p/f */
 
   if (RRFrame) {
     SSBits = 0;

@@ -1,4 +1,4 @@
-19:06:04 **** Incremental Build of configuration Release for project firstArduino ****
+18:29:36 **** Incremental Build of configuration Release for project firstArduino ****
 "D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
 'Building file: ..\sloeber.ino.cpp'
 'Starting C++ compile'
@@ -19,24 +19,24 @@
 "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
 E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
 section                     size      addr
-.data                        194   8388864
-.text                       5280         0
-.bss                        1180   8389058
+.data                        328   8388864
+.text                       5372         0
+.bss                        1181   8389192
 .comment                      17         0
 .note.gnu.avr.deviceinfo      64         0
-.debug_aranges               304         0
-.debug_info                10259         0
-.debug_abbrev               3137         0
-.debug_line                 4214         0
-.debug_frame                 708         0
-.debug_str                  2716         0
-.debug_loc                  5456         0
-.debug_ranges                312         0
-Total                      33841
+.debug_aranges               272         0
+.debug_info                10650         0
+.debug_abbrev               3123         0
+.debug_line                 4130         0
+.debug_frame                 716         0
+.debug_str                  2803         0
+.debug_loc                  5615         0
+.debug_ranges                336         0
+Total                      34607
 
 
 'Finished building target: firstArduino'
 ' '
 
-19:06:05 Build Finished. 0 errors, 0 warnings. (took 1s.185ms)
+18:29:37 Build Finished. 0 errors, 0 warnings. (took 1s.54ms)
 
