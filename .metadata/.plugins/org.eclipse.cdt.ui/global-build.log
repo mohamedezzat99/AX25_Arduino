@@ -4657,3 +4657,2448 @@ Total                      34371
 
 'Finished building target: firstArduino'
 ' '
+19:05:45 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4110         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34778
+
+
+'Finished building target: firstArduino'
+' '
+19:05:47 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4110         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34778
+
+
+'Finished building target: firstArduino'
+' '
+19:05:53 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4110         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34778
+
+
+'Finished building target: firstArduino'
+' '
+19:39:05 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4110         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34778
+
+
+'Finished building target: firstArduino'
+' '
+19:39:16 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4110         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34778
+
+
+'Finished building target: firstArduino'
+' '
+19:39:54 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4110         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34778
+
+
+'Finished building target: firstArduino'
+' '
+19:40:34 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4110         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34778
+
+
+'Finished building target: firstArduino'
+' '
+12:05:06 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4111         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34779
+
+
+'Finished building target: firstArduino'
+' '
+12:08:26 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        338   8388864
+.text                       5554         0
+.bss                        1417   8389202
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11075         0
+.debug_abbrev               3147         0
+.debug_line                 4462         0
+.debug_frame                 776         0
+.debug_str                  2778         0
+.debug_loc                  5865         0
+.debug_ranges                224         0
+Total                      36021
+
+
+'Finished building target: firstArduino'
+' '
+12:37:33 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4110         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34778
+
+
+'Finished building target: firstArduino'
+' '
+12:49:13 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        328   8388864
+.text                       5362         0
+.bss                        1417   8389192
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10666         0
+.debug_abbrev               3114         0
+.debug_line                 4110         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5581         0
+.debug_ranges                344         0
+Total                      34778
+
+
+'Finished building target: firstArduino'
+' '
+12:52:08 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        346   8388864
+.text                       5386         0
+.bss                        1417   8389210
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10718         0
+.debug_abbrev               3114         0
+.debug_line                 4128         0
+.debug_frame                 712         0
+.debug_str                  2791         0
+.debug_loc                  5567         0
+.debug_ranges                344         0
+Total                      34876
+
+
+'Finished building target: firstArduino'
+' '
+12:57:15 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5540         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11296         0
+.debug_abbrev               3147         0
+.debug_line                 4458         0
+.debug_frame                 792         0
+.debug_str                  2799         0
+.debug_loc                  5759         0
+.debug_ranges                224         0
+Total                      36167
+
+
+'Finished building target: firstArduino'
+' '
+13:09:52 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5562         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11518         0
+.debug_abbrev               3147         0
+.debug_line                 4470         0
+.debug_frame                 792         0
+.debug_str                  2799         0
+.debug_loc                  5880         0
+.debug_ranges                224         0
+Total                      36544
+
+
+'Finished building target: firstArduino'
+' '
+13:10:04 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5562         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11518         0
+.debug_abbrev               3147         0
+.debug_line                 4470         0
+.debug_frame                 792         0
+.debug_str                  2799         0
+.debug_loc                  5880         0
+.debug_ranges                224         0
+Total                      36544
+
+
+'Finished building target: firstArduino'
+' '
+13:10:54 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5568         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11518         0
+.debug_abbrev               3147         0
+.debug_line                 4470         0
+.debug_frame                 792         0
+.debug_str                  2799         0
+.debug_loc                  5880         0
+.debug_ranges                224         0
+Total                      36550
+
+
+'Finished building target: firstArduino'
+' '
+13:11:20 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5562         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11518         0
+.debug_abbrev               3147         0
+.debug_line                 4470         0
+.debug_frame                 792         0
+.debug_str                  2799         0
+.debug_loc                  5880         0
+.debug_ranges                224         0
+Total                      36544
+
+
+'Finished building target: firstArduino'
+' '
+13:13:24 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5576         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11350         0
+.debug_abbrev               3156         0
+.debug_line                 4484         0
+.debug_frame                 820         0
+.debug_str                  2799         0
+.debug_loc                  5928         0
+.debug_ranges                224         0
+Total                      36489
+
+
+'Finished building target: firstArduino'
+' '
+16:30:15 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5576         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11383         0
+.debug_abbrev               3156         0
+.debug_line                 4482         0
+.debug_frame                 820         0
+.debug_str                  2851         0
+.debug_loc                  5928         0
+.debug_ranges                248         0
+Total                      36596
+
+
+'Finished building target: firstArduino'
+' '
+16:50:05 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5820         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11648         0
+.debug_abbrev               3187         0
+.debug_line                 4588         0
+.debug_frame                 896         0
+.debug_str                  2898         0
+.debug_loc                  6255         0
+.debug_ranges                376         0
+Total                      37820
+
+
+'Finished building target: firstArduino'
+' '
+16:53:25 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5854         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11648         0
+.debug_abbrev               3187         0
+.debug_line                 4593         0
+.debug_frame                 896         0
+.debug_str                  2898         0
+.debug_loc                  6255         0
+.debug_ranges                376         0
+Total                      37859
+
+
+'Finished building target: firstArduino'
+' '
+16:55:24 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5820         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11648         0
+.debug_abbrev               3187         0
+.debug_line                 4587         0
+.debug_frame                 896         0
+.debug_str                  2898         0
+.debug_loc                  6255         0
+.debug_ranges                376         0
+Total                      37819
+
+
+'Finished building target: firstArduino'
+' '
+16:56:30 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5820         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11648         0
+.debug_abbrev               3187         0
+.debug_line                 4587         0
+.debug_frame                 896         0
+.debug_str                  2898         0
+.debug_loc                  6255         0
+.debug_ranges                376         0
+Total                      37819
+
+
+'Finished building target: firstArduino'
+' '
+16:58:33 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5862         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11676         0
+.debug_abbrev               3187         0
+.debug_line                 4599         0
+.debug_frame                 896         0
+.debug_str                  2898         0
+.debug_loc                  6255         0
+.debug_ranges                376         0
+Total                      37901
+
+
+'Finished building target: firstArduino'
+' '
+17:00:38 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5858         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11676         0
+.debug_abbrev               3187         0
+.debug_line                 4599         0
+.debug_frame                 896         0
+.debug_str                  2898         0
+.debug_loc                  6255         0
+.debug_ranges                376         0
+Total                      37897
+
+
+'Finished building target: firstArduino'
+' '
+17:02:24 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5934         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11824         0
+.debug_abbrev               3187         0
+.debug_line                 4654         0
+.debug_frame                 904         0
+.debug_str                  2898         0
+.debug_loc                  6440         0
+.debug_ranges                392         0
+Total                      38385
+
+
+'Finished building target: firstArduino'
+' '
+17:04:07 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5946         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11824         0
+.debug_abbrev               3187         0
+.debug_line                 4660         0
+.debug_frame                 904         0
+.debug_str                  2898         0
+.debug_loc                  6440         0
+.debug_ranges                392         0
+Total                      38403
+
+
+'Finished building target: firstArduino'
+' '
+17:04:10 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5946         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11824         0
+.debug_abbrev               3187         0
+.debug_line                 4660         0
+.debug_frame                 904         0
+.debug_str                  2898         0
+.debug_loc                  6440         0
+.debug_ranges                392         0
+Total                      38403
+
+
+'Finished building target: firstArduino'
+' '
+17:04:53 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        356   8388864
+.text                       5946         0
+.bss                        1417   8389220
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11824         0
+.debug_abbrev               3187         0
+.debug_line                 4660         0
+.debug_frame                 904         0
+.debug_str                  2898         0
+.debug_loc                  6440         0
+.debug_ranges                392         0
+Total                      38409
+
+
+'Finished building target: firstArduino'
+' '
+17:06:33 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        356   8388864
+.text                       5946         0
+.bss                        1417   8389220
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11824         0
+.debug_abbrev               3187         0
+.debug_line                 4660         0
+.debug_frame                 904         0
+.debug_str                  2898         0
+.debug_loc                  6440         0
+.debug_ranges                392         0
+Total                      38409
+
+
+'Finished building target: firstArduino'
+' '
+17:07:10 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        356   8388864
+.text                       5954         0
+.bss                        1417   8389220
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11852         0
+.debug_abbrev               3187         0
+.debug_line                 4666         0
+.debug_frame                 904         0
+.debug_str                  2898         0
+.debug_loc                  6440         0
+.debug_ranges                392         0
+Total                      38451
+
+
+'Finished building target: firstArduino'
+' '
+17:08:09 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        356   8388864
+.text                       5958         0
+.bss                        1417   8389220
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11852         0
+.debug_abbrev               3187         0
+.debug_line                 4666         0
+.debug_frame                 904         0
+.debug_str                  2898         0
+.debug_loc                  6440         0
+.debug_ranges                392         0
+Total                      38455
+
+
+'Finished building target: firstArduino'
+' '
+17:18:45 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        356   8388864
+.text                       5980         0
+.bss                        1417   8389220
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                12228         0
+.debug_abbrev               3222         0
+.debug_line                 4696         0
+.debug_frame                 904         0
+.debug_str                  2923         0
+.debug_loc                  6552         0
+.debug_ranges                400         0
+Total                      39063
+
+
+'Finished building target: firstArduino'
+' '
+17:19:27 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        356   8388864
+.text                       5980         0
+.bss                        1417   8389220
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                12228         0
+.debug_abbrev               3222         0
+.debug_line                 4696         0
+.debug_frame                 904         0
+.debug_str                  2923         0
+.debug_loc                  6552         0
+.debug_ranges                400         0
+Total                      39063
+
+
+'Finished building target: firstArduino'
+' '
+17:24:33 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        362   8388864
+.text                       7188         0
+.bss                        1421   8389226
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                13832         0
+.debug_abbrev               3438         0
+.debug_line                 5032         0
+.debug_frame                 888         0
+.debug_str                  3173         0
+.debug_loc                  6982         0
+.debug_ranges                576         0
+Total                      43277
+
+
+'Finished building target: firstArduino'
+' '
+17:24:36 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        362   8388864
+.text                       7188         0
+.bss                        1421   8389226
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                13832         0
+.debug_abbrev               3438         0
+.debug_line                 5032         0
+.debug_frame                 888         0
+.debug_str                  3173         0
+.debug_loc                  6982         0
+.debug_ranges                576         0
+Total                      43277
+
+
+'Finished building target: firstArduino'
+' '
+17:24:55 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        362   8388864
+.text                       7188         0
+.bss                        1421   8389226
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                13832         0
+.debug_abbrev               3438         0
+.debug_line                 5032         0
+.debug_frame                 888         0
+.debug_str                  3173         0
+.debug_loc                  6982         0
+.debug_ranges                576         0
+Total                      43277
+
+
+'Finished building target: firstArduino'
+' '
+17:30:51 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        362   8388864
+.text                       7188         0
+.bss                        1421   8389226
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                13821         0
+.debug_abbrev               3438         0
+.debug_line                 5032         0
+.debug_frame                 888         0
+.debug_str                  3173         0
+.debug_loc                  6982         0
+.debug_ranges                576         0
+Total                      43266
+
+
+'Finished building target: firstArduino'
+' '
+17:30:55 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        362   8388864
+.text                       7188         0
+.bss                        1421   8389226
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                13821         0
+.debug_abbrev               3438         0
+.debug_line                 5032         0
+.debug_frame                 888         0
+.debug_str                  3173         0
+.debug_loc                  6982         0
+.debug_ranges                576         0
+Total                      43266
+
+
+'Finished building target: firstArduino'
+' '
+17:31:14 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+C:\Users\MOHAME~1\AppData\Local\Temp\cciRNT5X.ltrans0.ltrans.o: In function `readFrameFromSerial':
+E:\myFirstSloeber\firstArduino\Release/..\firstArduino.ino:90: undefined reference to `atoh(unsigned char*, unsigned char*)'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:80: firstArduino.elf] Error 1
+"D:/Downloads/Sloeber/arduinoPlugin/tools/make/make all" terminated with exit code 2. Build might be incomplete.
+17:31:31 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+C:\Users\MOHAME~1\AppData\Local\Temp\ccZeOPwf.ltrans0.ltrans.o: In function `readFrameFromSerial':
+E:\myFirstSloeber\firstArduino\Release/..\firstArduino.ino:90: undefined reference to `atoh(unsigned char*, unsigned char*)'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:80: firstArduino.elf] Error 1
+"D:/Downloads/Sloeber/arduinoPlugin/tools/make/make all" terminated with exit code 2. Build might be incomplete.
+17:31:44 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        362   8388864
+.text                       7188         0
+.bss                        1421   8389226
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                13821         0
+.debug_abbrev               3438         0
+.debug_line                 5032         0
+.debug_frame                 888         0
+.debug_str                  3173         0
+.debug_loc                  6982         0
+.debug_ranges                576         0
+Total                      43266
+
+
+'Finished building target: firstArduino'
+' '
+17:31:47 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        362   8388864
+.text                       7188         0
+.bss                        1421   8389226
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                13821         0
+.debug_abbrev               3438         0
+.debug_line                 5032         0
+.debug_frame                 888         0
+.debug_str                  3173         0
+.debug_loc                  6982         0
+.debug_ranges                576         0
+Total                      43266
+
+
+'Finished building target: firstArduino'
+' '
+18:04:01 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        356   8388864
+.text                       5824         0
+.bss                        1417   8389220
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11347         0
+.debug_abbrev               3168         0
+.debug_line                 4577         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6188         0
+.debug_ranges                336         0
+Total                      37379
+
+
+'Finished building target: firstArduino'
+' '
+18:04:04 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        356   8388864
+.text                       5824         0
+.bss                        1417   8389220
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11347         0
+.debug_abbrev               3168         0
+.debug_line                 4577         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6188         0
+.debug_ranges                336         0
+Total                      37379
+
+
+'Finished building target: firstArduino'
+' '
+18:09:36 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        356   8388864
+.text                       5876         0
+.bss                        1417   8389220
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11495         0
+.debug_abbrev               3168         0
+.debug_line                 4611         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6252         0
+.debug_ranges                336         0
+Total                      37677
+
+
+'Finished building target: firstArduino'
+' '
+18:10:36 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5868         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11467         0
+.debug_abbrev               3168         0
+.debug_line                 4605         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6252         0
+.debug_ranges                336         0
+Total                      37653
+
+
+'Finished building target: firstArduino'
+' '
+18:16:23 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5868         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11467         0
+.debug_abbrev               3168         0
+.debug_line                 4605         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6252         0
+.debug_ranges                336         0
+Total                      37653
+
+
+'Finished building target: firstArduino'
+' '
+18:17:32 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5868         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11467         0
+.debug_abbrev               3168         0
+.debug_line                 4605         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6252         0
+.debug_ranges                336         0
+Total                      37653
+
+
+'Finished building target: firstArduino'
+' '
+18:22:22 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5888         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11626         0
+.debug_abbrev               3168         0
+.debug_line                 4622         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6271         0
+.debug_ranges                336         0
+Total                      37868
+
+
+'Finished building target: firstArduino'
+' '
+18:23:31 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5880         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11598         0
+.debug_abbrev               3168         0
+.debug_line                 4616         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6271         0
+.debug_ranges                336         0
+Total                      37826
+
+
+'Finished building target: firstArduino'
+' '
+19:20:45 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5902         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11651         0
+.debug_abbrev               3192         0
+.debug_line                 4624         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6294         0
+.debug_ranges                336         0
+Total                      37956
+
+
+'Finished building target: firstArduino'
+' '
+19:37:17 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5902         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11651         0
+.debug_abbrev               3192         0
+.debug_line                 4624         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6294         0
+.debug_ranges                336         0
+Total                      37956
+
+
+'Finished building target: firstArduino'
+' '
+19:37:58 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5902         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11651         0
+.debug_abbrev               3192         0
+.debug_line                 4624         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6294         0
+.debug_ranges                336         0
+Total                      37956
+
+
+'Finished building target: firstArduino'
+' '
+19:38:30 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5902         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11651         0
+.debug_abbrev               3192         0
+.debug_line                 4624         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6294         0
+.debug_ranges                336         0
+Total                      37956
+
+
+'Finished building target: firstArduino'
+' '
+19:39:36 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5878         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11495         0
+.debug_abbrev               3168         0
+.debug_line                 4614         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6252         0
+.debug_ranges                336         0
+Total                      37700
+
+
+'Finished building target: firstArduino'
+' '
+19:40:37 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5900         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11548         0
+.debug_abbrev               3192         0
+.debug_line                 4620         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6275         0
+.debug_ranges                336         0
+Total                      37828
+
+
+'Finished building target: firstArduino'
+' '
+19:46:48 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+In file included from ..\sloeber.ino.cpp:33:0:
+..\firstArduino.ino:139:1: error: expected declaration before '}' token
+ }
+ ^
+make: *** [subdir.mk:20: sloeber.ino.cpp.o] Error 1
+"D:/Downloads/Sloeber/arduinoPlugin/tools/make/make all" terminated with exit code 2. Build might be incomplete.
+19:46:54 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+In file included from ..\sloeber.ino.cpp:33:0:
+..\firstArduino.ino:139:1: error: expected declaration before '}' token
+ }
+ ^
+make: *** [subdir.mk:20: sloeber.ino.cpp.o] Error 1
+"D:/Downloads/Sloeber/arduinoPlugin/tools/make/make all" terminated with exit code 2. Build might be incomplete.
+19:47:14 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        840   8388864
+.text                       5696         0
+.bss                        1417   8389704
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11765         0
+.debug_abbrev               3155         0
+.debug_line                 4466         0
+.debug_frame                 840         0
+.debug_str                  2878         0
+.debug_loc                  6161         0
+.debug_ranges                328         0
+Total                      37931
+
+
+'Finished building target: firstArduino'
+' '
+19:47:17 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        840   8388864
+.text                       5696         0
+.bss                        1417   8389704
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11765         0
+.debug_abbrev               3155         0
+.debug_line                 4466         0
+.debug_frame                 840         0
+.debug_str                  2878         0
+.debug_loc                  6161         0
+.debug_ranges                328         0
+Total                      37931
+
+
+'Finished building target: firstArduino'
+' '
+19:47:55 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        310   8388864
+.text                       5316         0
+.bss                        1417   8389174
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                10570         0
+.debug_abbrev               3109         0
+.debug_line                 4316         0
+.debug_frame                 764         0
+.debug_str                  2779         0
+.debug_loc                  5504         0
+.debug_ranges                152         0
+Total                      34622
+
+
+'Finished building target: firstArduino'
+' '
+19:48:51 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        840   8388864
+.text                       5710         0
+.bss                        1417   8389704
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11725         0
+.debug_abbrev               3177         0
+.debug_line                 4466         0
+.debug_frame                 840         0
+.debug_str                  2878         0
+.debug_loc                  6161         0
+.debug_ranges                352         0
+Total                      37951
+
+
+'Finished building target: firstArduino'
+' '
+19:50:23 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        374   8388864
+.text                       5878         0
+.bss                        1417   8389238
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11495         0
+.debug_abbrev               3168         0
+.debug_line                 4614         0
+.debug_frame                 896         0
+.debug_str                  2885         0
+.debug_loc                  6252         0
+.debug_ranges                336         0
+Total                      37700
+
+
+'Finished building target: firstArduino'
+' '
+15:33:40 **** Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        350   8388864
+.text                       5576         0
+.bss                        1417   8389214
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               304         0
+.debug_info                11383         0
+.debug_abbrev               3156         0
+.debug_line                 4487         0
+.debug_frame                 820         0
+.debug_str                  2851         0
+.debug_loc                  5928         0
+.debug_ranges                248         0
+Total                      36601
+
+
+'Finished building target: firstArduino'
+' '
+17:45:07 **** Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        176   8388864
+.text                       5246         0
+.bss                        1417   8389040
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10281         0
+.debug_abbrev               3039         0
+.debug_line                 4056         0
+.debug_frame                 696         0
+.debug_str                  2843         0
+.debug_loc                  5460         0
+.debug_ranges                384         0
+Total                      33951
+
+
+'Finished building target: firstArduino'
+' '
+18:00:15 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        174   8388864
+.text                       5212         0
+.bss                        1417   8389038
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10010         0
+.debug_abbrev               3066         0
+.debug_line                 4004         0
+.debug_frame                 696         0
+.debug_str                  2830         0
+.debug_loc                  5319         0
+.debug_ranges                376         0
+Total                      33457
+
+
+'Finished building target: firstArduino'
+' '
+18:14:28 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        174   8388864
+.text                       5212         0
+.bss                        1417   8389038
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10010         0
+.debug_abbrev               3066         0
+.debug_line                 4004         0
+.debug_frame                 696         0
+.debug_str                  2830         0
+.debug_loc                  5319         0
+.debug_ranges                376         0
+Total                      33457
+
+
+'Finished building target: firstArduino'
+' '
+18:22:28 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        174   8388864
+.text                       5228         0
+.bss                        1417   8389038
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10085         0
+.debug_abbrev               3039         0
+.debug_line                 4046         0
+.debug_frame                 696         0
+.debug_str                  2843         0
+.debug_loc                  5460         0
+.debug_ranges                384         0
+Total                      33725
+
+
+'Finished building target: firstArduino'
+' '
+18:31:57 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        174   8388864
+.text                       5150         0
+.bss                        1417   8389038
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                 9424         0
+.debug_abbrev               3005         0
+.debug_line                 3963         0
+.debug_frame                 696         0
+.debug_str                  2793         0
+.debug_loc                  5108         0
+.debug_ranges                248         0
+Total                      32331
+
+
+'Finished building target: firstArduino'
+' '
+19:38:56 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        174   8388864
+.text                       5212         0
+.bss                        1417   8389038
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10010         0
+.debug_abbrev               3066         0
+.debug_line                 4004         0
+.debug_frame                 696         0
+.debug_str                  2830         0
+.debug_loc                  5319         0
+.debug_ranges                376         0
+Total                      33457
+
+
+'Finished building target: firstArduino'
+' '
+20:57:27 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        174   8388864
+.text                       5212         0
+.bss                        1417   8389038
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               272         0
+.debug_info                10010         0
+.debug_abbrev               3066         0
+.debug_line                 4004         0
+.debug_frame                 696         0
+.debug_str                  2830         0
+.debug_loc                  5319         0
+.debug_ranges                376         0
+Total                      33457
+
+
+'Finished building target: firstArduino'
+' '
