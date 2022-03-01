@@ -44,7 +44,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="Serial.write"/>
+			<item key="textPattern" value="Serial.print"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*.ino"/>
@@ -59,7 +59,7 @@
 			<item key="ignoreCase" value="true"/>
 			<item key="isRegExSearch" value="false"/>
 			<item key="isWholeWord" value="false"/>
-			<item key="textPattern" value="Serial.print"/>
+			<item key="textPattern" value="Serial.write"/>
 			<item key="scope" value="0"/>
 			<list key="fileNamePatterns">
 				<item value="*.ino"/>
