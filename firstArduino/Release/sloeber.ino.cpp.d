@@ -9,7 +9,7 @@ sloeber.ino.cpp.o: ..\sloeber.ino.cpp \
  D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino/Printable.h \
  D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino/USBAPI.h \
  D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino/Arduino.h \
- D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard/pins_arduino.h \
+ D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\mega/pins_arduino.h \
  ..\AX25_CRC.h ..\std_types.h ..\ax25.h ..\firstArduino.ino \
  ..\AX25_CRC.ino ..\ax25.ino
 
@@ -33,7 +33,7 @@ D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\ard
 
 D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino/Arduino.h:
 
-D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard/pins_arduino.h:
+D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\mega/pins_arduino.h:
 
 ..\AX25_CRC.h:
 
