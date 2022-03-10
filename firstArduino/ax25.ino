@@ -137,7 +137,7 @@ void AX25_Manager(uint8 *a_control) {
 	uint8 Control_To_SSP[236];
 	uint8 flag_Status = ACCEPT;
 	uint8 g_Recieved_NR_1;
-	uint8 flag_NS_VR = CLEAR; /* flag to indicate if received NS equals VR */
+	static uint8 flag_NS_VR; /* flag to indicate if received NS equals VR */
 
 	switch (state) {
 	case idle:
@@ -172,14 +172,9 @@ void AX25_Manager(uint8 *a_control) {
 				}
 			}
 
-			/*------------------------- TODO: extra part from me. check from Dr. -------------------------*/
-
 			/* check if type is I-frame */
 			received_control = g_control_recived[0];
-			//	Serial.println("RX Con");
-			//	Serial.println(received_control);
 			if ((received_control & 0x01) == 0) {
-				//	Serial.println("I-frame");
 
 				/* get subfield values from the control byte */
 				g_Received_NR = (received_control & 0xE0) >> 5;
@@ -187,29 +182,20 @@ void AX25_Manager(uint8 *a_control) {
 				PollFinal = (received_control & 0x10) >> 4;
 
 				/* check if Received NS equals V(R) */
-
-#if 0
-
-				Serial.println("Received NS");
-				Serial.print(Received_NS);
-				Serial.println("VR");
-				Serial.println(VR);
-#endif
-
 				if (Received_NS == VR) {
 
 					flag_NS_VR = SET; /* set flag to indicate that received NS == VR */
 
 				} else {
 
-					flag_Deframing_to_Control = EMPTY; /* Discards Frame */
+					/*TODO: check from Dr. make send REJ */
+					flag_NS_VR = CLEAR;
+					state = RX; /* sets the state to RX in order to send REJ in this case */
+					// flag_Deframing_to_Control = EMPTY; /* Discards Frame */
 				}
 			}
 
-			/*--------------------------------------------- end of to-do (note don't forget the if condition below has an extra term after the Address part) ---------------------------------------------*/
-
-			if (notMyAddress != SET && flag_NS_VR == SET) { /*(TODO: (check from DR about the flag_NS_VR == SET part) continues if the address is ours */
-				flag_NS_VR = CLEAR;
+			if (notMyAddress != SET && flag_NS_VR == SET) { /*continues if the address is ours and the number of frame is what is expected*/
 				/* copy array to upper layer */
 				for (i = 0; i < SSP_FRAME_MAX_SIZE; i++) {
 					Control_To_SSP[i] = g_info_reciver[i];
@@ -300,10 +286,11 @@ void AX25_Manager(uint8 *a_control) {
 		}
 
 		/* check on CRC flag (in de-frame function) if True make RR if False make REJ */
-		if (flag_RX_crc == SET) {
+		if (flag_RX_crc == SET && flag_NS_VR == SET) {
 			Serial1.println("Accept");
 			*a_control = AX25_getControl(S, RR, NS, g_Received_NR, pollfinal);
 			incrementStateVar(&VR); /*(TODO: check from DR.) increments VR if I-frame is accepted */
+			flag_NS_VR = CLEAR;
 		} else {
 
 			Serial1.println("Reject");
@@ -444,10 +431,10 @@ void AX25_deFrame(uint8 *buffer, uint16 frameSize, uint8 infoSize) {
 			}
 		}
 	}
-	/*TODO: check from Dr. i added this extra else to prevent from contionusly going to deframe */
-//	else {
-//		flag_SerialRXBuffer = EMPTY;
-//	}
+
+	else { /* prevent from contionusly going to deframe */
+		flag_SerialRXBuffer = EMPTY;
+	}
 }
 
 #if 0

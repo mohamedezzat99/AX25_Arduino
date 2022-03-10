@@ -1,5 +1,5 @@
 /*
- * main.c
+ *
  *
  *  Created on: Oct 8, 2021
  *      Author: Mohamed Ezzat
@@ -10,6 +10,7 @@
 
 #include "ax25.h"
 
+//#define RX_M
 #define rxDebug_IFRAME
 //#define rxDebug_SFRAME
 
@@ -70,25 +71,50 @@ void printSerialTXBufferToSerial() {
 
 #if 1
 void readFrameFromSerial() {
-	if (Serial.available() && flag_SerialRXBuffer == EMPTY) {
+		uint8 flag_flagAndDestMatchSerialRXBuffer = SET; /* init value as set */
+		uint8 flagAndDestAddress[8]={0x7e,'O', 'N', '4', 'U', 'L', 'G', 0x60};
+
+		if (Serial.available() && flag_SerialRXBuffer == EMPTY) {
 		g_infoSize = SSP_FRAME_MAX_SIZE;
 		Serial1.print("\n waiting for data \n");
-		Serial.readBytes(SerialRXBuffer, AX25_FRAME_MAX_SIZE);
+
+		Serial.readBytes(SerialRXBuffer, 8);
+		for (uint8 i = 0; i< 8; i++){
+			if(SerialRXBuffer[i] != flagAndDestAddress[i]){
+				flag_flagAndDestMatchSerialRXBuffer = CLEAR;
+			}
+		}
+
+		Serial1.println(SerialRXBuffer[0]);
+		if(flag_flagAndDestMatchSerialRXBuffer == SET){
+		for (uint8 i =1; i< 32; i++){
+			Serial.readBytes(SerialRXBuffer+(8*i), 8);
+		}
+
+		//Serial.readBytes(SerialRXBuffer, AX25_FRAME_MAX_SIZE);
 
 		//Serial.flush();
 		delay(100);
 		flag_SerialRXBuffer = FULL;
 		Serial1.print("\n Received Frame\n");
-		// Serial.flush();
+		Serial.flush();
 
 		/* prints the frame received from serial on serial monitor */
 #if 1
-		for (int i = 0; i < 256; ++i) {
+		for (int i = 0; i < 30 ; ++i) {
 			Serial1.print(SerialRXBuffer[i], HEX);
 			Serial1.flush();
 		}
 		Serial1.print("\n\n");
+
+		for (int i = 230; i < 256 ; ++i) {
+					Serial1.print(SerialRXBuffer[i], HEX);
+					Serial1.flush();
+				}
+
+		Serial1.print("\n\n");
 #endif
+	}
 	}
 }
 #endif
@@ -162,7 +188,7 @@ void setup() {
 	Serial.begin(9600);
 	Serial1.begin(9600);
 	/* if we connect as RX remove this part */
-#if 1
+#ifndef RX_M
 	if (flag_SSP_to_Control == EMPTY) {
 		fillBuffer(SSP_to_Control_Buffer, SIZE_SSP_to_Control_Buffer);
 		flag_SSP_to_Control = FULL;
@@ -176,7 +202,7 @@ void loop() {
 	uint8 control;
 	uint16 frameSize = 0;
 	//delay(10);
-	delay(100);
+	//delay(100);
 
 	/* Sends next frame */
 	if (flag_next_frame == FULL) {
@@ -208,7 +234,7 @@ void loop() {
 	/* Gets frame from serial */
 	readFrameFromSerial();
 	//serialFlush();
-	delay(100);
+//	delay(100);
 
 	/* Calls the de-framing function */
 	if (flag_Deframing_to_Control == EMPTY && flag_SerialRXBuffer == FULL) {

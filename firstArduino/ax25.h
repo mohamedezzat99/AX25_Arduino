@@ -67,12 +67,6 @@ typedef enum{
 }Status;
 
 
-//extern uint8 flag_SSP_to_Control=EMPTY;
-//extern uint8 flag_Control_to_Framing=EMPTY;
-//extern uint8 flag_Control_to_SSP=EMPTY;
-//extern uint8 flag_Deframing_to_Control=EMPTY;
-
-
 /***********************************************
  *              Function Prototypes            *
  ***********************************************/
