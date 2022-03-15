@@ -77,7 +77,7 @@ E:\myFirstSloeber\firstArduino\Release\arduino.ar: $(AR_OBJ)
 
 firstArduino.elf: $(LINK_OBJ) $(AR)
 	@echo 'Starting combiner'
-	"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections,--relax -mmcu=atmega2560   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"   $(LINK_OBJ)    E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+	"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"   $(LINK_OBJ)    E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
 	@echo 'Finished building: $@'
 	@echo ' '
 

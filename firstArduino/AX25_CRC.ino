@@ -18,33 +18,7 @@
  * RETURN:
  * the CRC with a final XORed operation.
  *--------------------------------------------------------------------------*/
-#if 0
-uint16 computeCRC(uint8 *buffer, uint16 * OpArrSize) {
-	unsigned int i, j;
-	unsigned short shiftRegister, outBit;
-	char byte;
-	/* Initialization of the Shift Register to 0xFFFF */
-	shiftRegister = 0xFFFF;
 
-	for(i=1 ; i<*OpArrSize; i++) {  /* The first flag is not calculated so i=1. */
-		byte = buffer[i];
-
-		for(j=0; j<8; j++) {
-			outBit = shiftRegister & 0x0001;
-			shiftRegister >>= 0x01;  /* Shift the register to the right. */
-
-			if(outBit != (byte & 0x01)) {
-				shiftRegister ^= 0x8408;  /* Mirrored polynom. */
-				byte >>= 0x01;
-				continue;
-			}
-			byte >>= 0x01;
-		}
-	}
-	return shiftRegister ^ 0xFFFF;  /* Final XOR, FCS calculation. */
-}
-#endif
-#if 1
 uint16 computeCRC( uint8* data_p, uint16 *length) {
   unsigned char x;
   unsigned short crc = 0xFFFF;
@@ -71,7 +45,6 @@ uint16 computeCRC( uint8* data_p, uint16 *length) {
 
   return crc;
 }
-#endif
 /*--------------------------------------------------------------------------*
  * AX.25 FCS positioning.
  * Put the FCS in the right place in the frame. The FCS is sent MSB first

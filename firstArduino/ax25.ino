@@ -242,10 +242,18 @@ void AX25_Manager(uint8 *a_control) {
 					g_Recieved_NR_1 = 7;
 				}
 
+#ifdef DEBUG
+				Serial.print(g_Recieved_NR_1);
+				Serial.print(VS);
+				Serial.print(Received_Sbits);
+#endif
 				if ((g_Recieved_NR_1) == VS
 						&& (Received_Sbits == RR || Received_Sbits == RNR)) { /* check if frame was received properly or not by other side */
 					flag_Status = ACCEPT; /* this means that the frame sent was accepted */
-					//						Serial.print("\nAccept\n");
+
+#ifdef DEBUG
+					Serial.print("\nAccept\n");
+#endif
 
 					/* make values of VS range from 0 --> 7 only */
 					if (VS < 7) {
@@ -257,7 +265,11 @@ void AX25_Manager(uint8 *a_control) {
 					state = idle;
 				} else {
 					flag_Status = REJECT;
-					//		Serial.print("\nReject\n");
+
+#ifdef DEBUG
+					Serial.print("\nReject\n");
+
+#endif
 					state = idle;
 				}
 
@@ -285,16 +297,23 @@ void AX25_Manager(uint8 *a_control) {
 			VS = 0;
 		}
 
+		NR = VR;
+
 		/* check on CRC flag (in de-frame function) if True make RR if False make REJ */
 		if (flag_RX_crc == SET && flag_NS_VR == SET) {
-			Serial1.println("Accept");
-			*a_control = AX25_getControl(S, RR, NS, g_Received_NR, pollfinal);
+#ifdef DEBUG
+			Serial.println("Accept 1");
+#endif
+			//*a_control = AX25_getControl(S, RR, NS, g_Received_NR, pollfinal);
+			*a_control = AX25_getControl(S, RR, NS, NR, pollfinal);
 			incrementStateVar(&VR); /*(TODO: check from DR.) increments VR if I-frame is accepted */
 			flag_NS_VR = CLEAR;
 		} else {
 
-			Serial1.println("Reject");
-			*a_control = AX25_getControl(S, REJ, NS, g_Received_NR, pollfinal);
+#ifdef DEBUG
+			Serial.println("Reject 1");
+#endif
+			*a_control = AX25_getControl(S, REJ, NS, NR, pollfinal);
 		}
 
 		/*------------------------------------------*/

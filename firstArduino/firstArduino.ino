@@ -10,9 +10,11 @@
 
 #include "ax25.h"
 
-//#define RX_M
-#define rxDebug_IFRAME
-//#define rxDebug_SFRAME
+/* keep this line when in Arduino is in RX mode, otherwise, comment it out. */
+#define RX_M
+
+/* keep this line when Debugging, otherwise, comment it out. */
+//#define DEBUG
 
 uint8 SerialTXBuffer[AX25_FRAME_MAX_SIZE];
 uint8 SerialRXBuffer[AX25_FRAME_MAX_SIZE];
@@ -31,18 +33,15 @@ uint8 flag_next_frame = EMPTY;
 
 uint8 g_infoSize = 236;  //temp set as 236
 
-//extern uint8 flag_TX;
-//extern uint8 flag_RX;
-//extern uint8 flag_busy;
-
 void serialFlush() {
 	while (Serial.available() > 0) {
 		char t = Serial.read();
 	}
-
-	while (Serial1.available() > 0) {
+#ifdef DEBUG
+	while (Serial.available() > 0) {
 		char t = Serial.read();
 	}
+#endif
 }
 
 /* Testing Function */
@@ -69,124 +68,82 @@ void printSerialTXBufferToSerial() {
 	}
 }
 
-#if 1
 void readFrameFromSerial() {
-		uint8 flag_flagAndDestMatchSerialRXBuffer = SET; /* init value as set */
-		uint8 flagAndDestAddress[8]={0x7e,'O', 'N', '4', 'U', 'L', 'G', 0x60};
+	uint8 flag_flagAndDestMatchSerialRXBuffer = SET; /* init value as set */
+	uint8 flagAndDestAddress[8] = { 0x7e, 'O', 'N', '4', 'U', 'L', 'G', 0x60 };
 
-		if (Serial.available() && flag_SerialRXBuffer == EMPTY) {
+	if (Serial.available() && flag_SerialRXBuffer == EMPTY) {
 		g_infoSize = SSP_FRAME_MAX_SIZE;
-		Serial1.print("\n waiting for data \n");
+
+#ifdef DEBUG
+		Serial.print("\n waiting for data \n");
+#endif
 
 		Serial.readBytes(SerialRXBuffer, 8);
-		for (uint8 i = 0; i< 8; i++){
-			if(SerialRXBuffer[i] != flagAndDestAddress[i]){
+		for (uint8 i = 0; i < 8; i++) {
+			if (SerialRXBuffer[i] != flagAndDestAddress[i]) {
 				flag_flagAndDestMatchSerialRXBuffer = CLEAR;
 			}
 		}
 
-		Serial1.println(SerialRXBuffer[0]);
-		if(flag_flagAndDestMatchSerialRXBuffer == SET){
-		for (uint8 i =1; i< 32; i++){
-			Serial.readBytes(SerialRXBuffer+(8*i), 8);
-		}
-
-		//Serial.readBytes(SerialRXBuffer, AX25_FRAME_MAX_SIZE);
-
-		//Serial.flush();
-		delay(100);
-		flag_SerialRXBuffer = FULL;
-		Serial1.print("\n Received Frame\n");
-		Serial.flush();
-
-		/* prints the frame received from serial on serial monitor */
-#if 1
-		for (int i = 0; i < 30 ; ++i) {
-			Serial1.print(SerialRXBuffer[i], HEX);
-			Serial1.flush();
-		}
-		Serial1.print("\n\n");
-
-		for (int i = 230; i < 256 ; ++i) {
-					Serial1.print(SerialRXBuffer[i], HEX);
-					Serial1.flush();
-				}
-
-		Serial1.print("\n\n");
+#ifdef DEBUG
+		Serial.println(SerialRXBuffer[0]);
 #endif
-	}
-	}
-}
-#endif
-
-#if 0
-void readFrameFromSerial() {
-
-	if (Serial.available() && flag_SerialRXBuffer == EMPTY) {
-
-		byte toExtract[513];
-		g_infoSize = 236;
-		Serial.print("\n waiting for data \n");
-
-		if (Serial.available() > 0) {
-			int i = 0;
-			while (Serial.available() > 0) {  //if serial available
-				char inchar = Serial.read();
-				Serial.flush();
-				toExtract[i] = inchar; // add char to txt string
-				i++; // increment to where to write next
-				toExtract[i] = '\0'; //null termination
+		if (flag_flagAndDestMatchSerialRXBuffer == SET) {
+			for (uint8 i = 1; i < 32; i++) {
+				Serial.readBytes(SerialRXBuffer + (8 * i), 8);
 			}
-		}
 
-		Serial.flush();
-		Serial.print("\n RXBuffer \n");
-    //Serial1.begin("\n");
-		boolean flag = atoh(SerialRXBuffer, toExtract);
-		for (int i = 0; i < AX25_FRAME_MAX_SIZE; ++i) {
-			Serial.print(SerialRXBuffer[i], HEX);
-		}
-		Serial.print("\n Extract \n");
+			//Serial.readBytes(SerialRXBuffer, AX25_FRAME_MAX_SIZE);
 
-		for (int i = 0; i < 513; ++i) {
-			Serial.print(toExtract[i]);
-		}
-
-		Serial.flush();
-
-		if (flag != NULL) {
+			//Serial.flush();
 			delay(100);
 			flag_SerialRXBuffer = FULL;
-			Serial.print("\n Received Frame\n");
-			Serial.flush();
-		}
-	}
-}
 
-byte* atoh(byte *destination, const byte *source) {
-	byte *ret = destination;
-
-	for (int lsb, msb; *source; source += 2) {
-		msb = tolower(*source);
-		lsb = tolower(*(source + 1));
-		msb -= isdigit(msb) ? 0x30 : 0x57;
-		lsb -= isdigit(lsb) ? 0x30 : 0x57;
-		if ((msb < 0x0 || msb > 0xf) || (lsb < 0x0 || lsb > 0xf)) {
-			*ret = 0;
-			return NULL;
-		}
-		*destination++ = (char) (lsb | (msb << 4));
-	}
-	*destination = 0;
-	return ret;
-}
-
+#ifdef DEBUG
+		Serial.print("\n Received Frame\n");
 #endif
+			Serial.flush();
+
+			/* prints the frame received from serial on serial monitor */
+
+			for (int i = 0; i < 30; ++i) {
+
+#ifdef DEBUG
+			Serial.print(SerialRXBuffer[i], HEX);
+			Serial.flush();
+#endif
+
+			}
+
+#ifdef DEBUG
+		Serial.print("\n\n");
+#endif
+
+			for (int i = 230; i < 256; ++i) {
+
+#ifdef DEBUG
+					Serial.print(SerialRXBuffer[i], HEX);
+					Serial.flush();
+#endif
+			}
+
+#ifdef DEBUG
+		Serial.print("\n\n");
+#endif
+
+		}
+	}
+}
 
 void setup() {
 	// put your setup code here, to run once:
 	Serial.begin(9600);
+
+#ifdef DEBUG_1
 	Serial1.begin(9600);
+#endif
+
 	/* if we connect as RX remove this part */
 #ifndef RX_M
 	if (flag_SSP_to_Control == EMPTY) {
@@ -201,9 +158,6 @@ void loop() {
 
 	uint8 control;
 	uint16 frameSize = 0;
-	//delay(10);
-	//delay(100);
-
 	/* Sends next frame */
 	if (flag_next_frame == FULL) {
 		if (flag_SSP_to_Control == EMPTY) {
@@ -217,13 +171,19 @@ void loop() {
 	if ((flag_SSP_to_Control == FULL && flag_Control_to_Framing == EMPTY)
 			|| (flag_Control_to_SSP == EMPTY
 					&& flag_Deframing_to_Control == FULL)) {
-		Serial1.print("\nManagement\n");
+
+#ifdef DEBUG
+		Serial.print("\nManagement\n");
+#endif
 		AX25_Manager(&control);
 	}
 
 	/* Builds Frame after receiving fields */
 	if (flag_Control_to_Framing == FULL && flag_SerialTXBuffer == EMPTY) {
-		Serial1.print("\nBuild Frame\n");
+
+#ifdef DEBUG
+		Serial.print("\nBuild Frame\n");
+#endif
 		AX25_buildFrame(SerialTXBuffer, info, &frameSize, addr, control,
 				g_infoSize);
 	}
@@ -234,11 +194,13 @@ void loop() {
 	/* Gets frame from serial */
 	readFrameFromSerial();
 	//serialFlush();
-//	delay(100);
 
 	/* Calls the de-framing function */
 	if (flag_Deframing_to_Control == EMPTY && flag_SerialRXBuffer == FULL) {
-		Serial1.print("\nDeframe\n");
+
+#ifdef DEBUG
+		Serial.print("\nDeframe\n");
+#endif
 		AX25_deFrame(SerialRXBuffer, frameSize, g_infoSize);
 	}
 }
