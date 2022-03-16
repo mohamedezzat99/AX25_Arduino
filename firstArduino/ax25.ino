@@ -151,7 +151,8 @@ void AX25_Manager(uint8 *a_control) {
 				info[i] = SSP_to_Control_Buffer[i];
 			}
 
-			flag_SSP_to_Control = EMPTY;
+		//	flag_SSP_to_Control = EMPTY;
+
 			flag_Control_to_Framing = FULL;
 			NS = VS;
 			NR = VR;
@@ -250,6 +251,12 @@ void AX25_Manager(uint8 *a_control) {
 				if ((g_Recieved_NR_1) == VS
 						&& (Received_Sbits == RR || Received_Sbits == RNR)) { /* check if frame was received properly or not by other side */
 					flag_Status = ACCEPT; /* this means that the frame sent was accepted */
+
+
+					/*TODO: check from Dr. */
+					/* original line was @ line 154 */
+					/* moved this here so that a new frame is made only when an RR is received otherwise if we receive REJ we will send the same frame */
+					flag_SSP_to_Control = EMPTY;
 
 #ifdef DEBUG
 					Serial.print("\nAccept\n");

@@ -11,7 +11,7 @@
 #include "ax25.h"
 
 /* keep this line when in Arduino is in RX mode, otherwise, comment it out. */
-#define RX_M
+//#define RX_M
 
 /* keep this line when Debugging, otherwise, comment it out. */
 //#define DEBUG
