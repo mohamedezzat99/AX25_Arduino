@@ -11,10 +11,13 @@
 #include "ax25.h"
 
 /* keep this line when in Arduino is in RX mode, otherwise, comment it out. */
-//#define RX_M
+#define RX_M
 
 /* keep this line when Debugging, otherwise, comment it out. */
-//#define DEBUG
+#define DEBUG
+
+/* used to initiate serial 1 for Arduino MEGA */
+//#define DEBUG_1
 
 uint8 SerialTXBuffer[AX25_FRAME_MAX_SIZE];
 uint8 SerialRXBuffer[AX25_FRAME_MAX_SIZE];
@@ -38,7 +41,7 @@ void serialFlush() {
 		char t = Serial.read();
 	}
 #ifdef DEBUG
-	while (Serial.available() > 0) {
+	while (Serial1.available() > 0) {
 		char t = Serial.read();
 	}
 #endif
@@ -76,7 +79,7 @@ void readFrameFromSerial() {
 		g_infoSize = SSP_FRAME_MAX_SIZE;
 
 #ifdef DEBUG
-		Serial.print("\n waiting for data \n");
+		Serial1.print("\n waiting for data \n");
 #endif
 
 		Serial.readBytes(SerialRXBuffer, 8);
@@ -87,7 +90,7 @@ void readFrameFromSerial() {
 		}
 
 #ifdef DEBUG
-		Serial.println(SerialRXBuffer[0]);
+		Serial1.println(SerialRXBuffer[0]);
 #endif
 		if (flag_flagAndDestMatchSerialRXBuffer == SET) {
 			for (uint8 i = 1; i < 32; i++) {
@@ -101,7 +104,7 @@ void readFrameFromSerial() {
 			flag_SerialRXBuffer = FULL;
 
 #ifdef DEBUG
-		Serial.print("\n Received Frame\n");
+		Serial1.print("\n Received Frame\n");
 #endif
 			Serial.flush();
 
@@ -110,26 +113,26 @@ void readFrameFromSerial() {
 			for (int i = 0; i < 30; ++i) {
 
 #ifdef DEBUG
-			Serial.print(SerialRXBuffer[i], HEX);
-			Serial.flush();
+			Serial1.print(SerialRXBuffer[i], HEX);
+			Serial1.flush();
 #endif
 
 			}
 
 #ifdef DEBUG
-		Serial.print("\n\n");
+		Serial1.print("\n\n");
 #endif
 
 			for (int i = 230; i < 256; ++i) {
 
 #ifdef DEBUG
-					Serial.print(SerialRXBuffer[i], HEX);
-					Serial.flush();
+					Serial1.print(SerialRXBuffer[i], HEX);
+					Serial1.flush();
 #endif
 			}
 
 #ifdef DEBUG
-		Serial.print("\n\n");
+		Serial1.print("\n\n");
 #endif
 
 		}
@@ -140,7 +143,7 @@ void setup() {
 	// put your setup code here, to run once:
 	Serial.begin(9600);
 
-#ifdef DEBUG_1
+#ifdef DEBUG
 	Serial1.begin(9600);
 #endif
 
@@ -173,7 +176,7 @@ void loop() {
 					&& flag_Deframing_to_Control == FULL)) {
 
 #ifdef DEBUG
-		Serial.print("\nManagement\n");
+		Serial1.print("\nManagement\n");
 #endif
 		AX25_Manager(&control);
 	}
@@ -182,7 +185,7 @@ void loop() {
 	if (flag_Control_to_Framing == FULL && flag_SerialTXBuffer == EMPTY) {
 
 #ifdef DEBUG
-		Serial.print("\nBuild Frame\n");
+		Serial1.print("\nBuild Frame\n");
 #endif
 		AX25_buildFrame(SerialTXBuffer, info, &frameSize, addr, control,
 				g_infoSize);
@@ -199,7 +202,7 @@ void loop() {
 	if (flag_Deframing_to_Control == EMPTY && flag_SerialRXBuffer == FULL) {
 
 #ifdef DEBUG
-		Serial.print("\nDeframe\n");
+		Serial1.print("\nDeframe\n");
 #endif
 		AX25_deFrame(SerialRXBuffer, frameSize, g_infoSize);
 	}
