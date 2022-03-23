@@ -178,14 +178,15 @@ void AX25_Manager(uint8 *a_control) {
 			/* Checks if received address is ours */
 			for (i = 0; i < ADDR_LEN; i++) {
 				if (g_received_address[i] != myAddress[i]) {
-					notMyAddress = SET;
+					notMyAddress = SET;	/* set the flag to show the address is not ours */
+					Serial1.print("\n Address is NOT ours \n");
 					flag_Deframing_to_Control = EMPTY; /* clears Buffer in case address is not ours */
 					break; /* breaks as soon as it finds a difference in the address */
 				}
 			}
 
 			/* check if type is I-frame */
-			received_control = g_control_recived[0];
+			received_control = g_control_recived[0]; /* copy the received cntrol byte */
 			if ((received_control & 0x01) == 0) {
 
 				/* get subfield values from the control byte */
@@ -254,22 +255,22 @@ void AX25_Manager(uint8 *a_control) {
 					g_Recieved_NR_1 = 7;
 				}
 
-#ifdef DEBUG
-				Serial1.print(g_Recieved_NR_1);
-				Serial1.print(VS);
-				Serial1.print(Received_Sbits);
-#endif
+//#ifdef DEBUG
+//				Serial1.print(g_Recieved_NR_1);
+//				Serial1.print(VS);
+//				Serial1.print(Received_Sbits);
+//#endif
 				if ((g_Recieved_NR_1) == VS
 						&& (Received_Sbits == RR || Received_Sbits == RNR)) { /* check if frame was received properly or not by other side */
 					flag_Status = ACCEPT; /* this means that the frame sent was accepted */
-					rejCounter=0; /* reset REJ counter */
+					rejCounter = 0; /* reset REJ counter */
 
 					/*TODO: check from Dr. */
 					/* original line was @ line 154 */
 					/* moved this here so that a new frame is made only when an RR is received otherwise if we receive REJ we will send the same frame */
 					//	flag_SSP_to_Control = EMPTY;
 #ifdef DEBUG
-					Serial1.print("\nAccept\n");
+					Serial1.print("\n The Frame we sent was Accepted \n");
 #endif
 
 					/* make values of VS range from 0 --> 7 only */
@@ -280,22 +281,23 @@ void AX25_Manager(uint8 *a_control) {
 
 					flag_Status = REJECT;
 
-					if(rejCounter == 2){
-						flag_Status = ACCEPT; /* this means that the frame sent was accepted */
+					if (rejCounter == 2) {
+						Serial1.print("\n Reject Counter Reached 3 so frame is skipped \n");
+						flag_Status = ACCEPT; /* this means that the frame sent was skipped but treat it as accepted*/
 						flag_SSP_to_Control = EMPTY;
 						incrementStateVar(&VS);
 						state = idle;
-						rejCounter=0;
-					}
-					else{
+						rejCounter = 0;
+					} else {
 						rejCounter++;
-					}
 
 #ifdef DEBUG
-					Serial1.print("\nReject\n");
-					Serial1.print("\n rejCounter \n");
+					Serial1.print("\nThe Frame we sent was Rejected\n");
+					Serial1.print("\n rejCounter: ");
 					Serial1.print(rejCounter);
+					Serial1.print("\n");
 #endif
+					}
 					state = idle;
 				}
 
@@ -323,7 +325,7 @@ void AX25_Manager(uint8 *a_control) {
 		/* check on CRC flag (in de-frame function) if True make RR if False make REJ */
 		if (flag_RX_crc == SET && flag_NS_VR == SET) {
 #ifdef DEBUG
-			Serial1.println("Accept 1");
+			Serial1.print("\n Accept the received frame \n");
 #endif
 			//*a_control = AX25_getControl(S, RR, NS, g_Received_NR, pollfinal);
 			*a_control = AX25_getControl(S, RR, NS, NR, pollfinal);
@@ -332,7 +334,7 @@ void AX25_Manager(uint8 *a_control) {
 		} else {
 
 #ifdef DEBUG
-			Serial1.println("Reject 1");
+			Serial1.print("\n Reject the received frame \n");
 #endif
 			*a_control = AX25_getControl(S, REJ, NS, NR, pollfinal);
 		}
@@ -388,7 +390,7 @@ void AX25_buildFrame(uint8 *buffer, uint8 *a_info_ptr, uint16 *frameSize,
 	buffer[i] = 0x7E;
 	*frameSize = i + 1;
 
-	flag_Control_to_Framing = EMPTY; /*  */
+	flag_Control_to_Framing = EMPTY;
 	flag_SerialTXBuffer = FULL;
 }
 
@@ -403,6 +405,7 @@ void AX25_buildFrame(uint8 *buffer, uint8 *a_info_ptr, uint16 *frameSize,
  *
  * Notes:
  *        Sets the De-framing to Control flag
+ *        controls the flag_RX_crc
  *
  */
 
@@ -472,7 +475,7 @@ void AX25_deFrame(uint8 *buffer, uint16 frameSize, uint8 infoSize) {
 		}
 	}
 
-	else { /* prevent from contionusly going to deframe */
+	else { /* prevent from continuously going to de-frame */
 		flag_SerialRXBuffer = EMPTY;
 	}
 }

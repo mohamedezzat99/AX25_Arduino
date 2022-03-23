@@ -41,7 +41,7 @@ void serialFlush() {
 		char t = Serial.read();
 	}
 #ifdef DEBUG
-	while (Serial1.available() > 0) {
+	while (Serial.available() > 0) {
 		char t = Serial.read();
 	}
 #endif
@@ -49,12 +49,10 @@ void serialFlush() {
 
 /* Testing Function */
 void print_info() {
-	Serial.print("\nHi\n");
 	for (int i = 0; i < SSP_FRAME_MAX_SIZE; ++i) {
 		Serial.print(info[i], HEX);
 	}
 	Serial.flush();
-	Serial.print("\nHi 2\n");
 	Serial.println(g_infoSize);
 }
 
@@ -89,9 +87,9 @@ void readFrameFromSerial() {
 			}
 		}
 
-#ifdef DEBUG
-		Serial1.println(SerialRXBuffer[0]);
-#endif
+//#ifdef DEBUG
+//		Serial1.println(SerialRXBuffer[0]);
+//#endif
 		if (flag_flagAndDestMatchSerialRXBuffer == SET) {
 			for (uint8 i = 1; i < 32; i++) {
 				Serial.readBytes(SerialRXBuffer + (8 * i), 8);
@@ -104,7 +102,7 @@ void readFrameFromSerial() {
 			flag_SerialRXBuffer = FULL;
 
 #ifdef DEBUG
-		Serial1.print("\n Received Frame\n");
+			Serial1.print("\n Received Frame\n");
 #endif
 			Serial.flush();
 
@@ -113,26 +111,26 @@ void readFrameFromSerial() {
 			for (int i = 0; i < 30; ++i) {
 
 #ifdef DEBUG
-			Serial1.print(SerialRXBuffer[i], HEX);
-			Serial1.flush();
+				Serial1.print(SerialRXBuffer[i], HEX);
+				Serial.flush();
 #endif
 
 			}
 
 #ifdef DEBUG
-		Serial1.print("\n\n");
+			Serial1.print("\n\n");
 #endif
 
 			for (int i = 230; i < 256; ++i) {
 
 #ifdef DEBUG
-					Serial1.print(SerialRXBuffer[i], HEX);
-					Serial1.flush();
+				Serial1.print(SerialRXBuffer[i], HEX);
+				Serial.flush();
 #endif
 			}
 
 #ifdef DEBUG
-		Serial1.print("\n\n");
+			Serial1.print("\n\n");
 #endif
 
 		}
@@ -143,9 +141,8 @@ void setup() {
 	// put your setup code here, to run once:
 	Serial.begin(9600);
 
-#ifdef DEBUG
+
 	Serial1.begin(9600);
-#endif
 
 	/* if we connect as RX remove this part */
 #ifndef RX_M
@@ -207,4 +204,3 @@ void loop() {
 		AX25_deFrame(SerialRXBuffer, frameSize, g_infoSize);
 	}
 }
-
