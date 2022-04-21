@@ -78,40 +78,32 @@ void print_info() {
 	Serial.println(g_infoSize);
 }
 
+
+/*
+ * this function handles the flag_SerialTXBuffer flag.
+ *
+ * */
 void printSerialTXBufferToSerial() {
 	if (flag_SerialTXBuffer == FULL) {
 
-		//Send message to receiver
-			  //const char text[] = "Hello World";
 		radio.stopListening();
-			// delay(1000);
-
-
-
-
-	//for (uint8 i = 0; i < 31; i++) {
-		//radio.write(&SerialTXBuffer[i], sizeof(uint8));
-		//radio.write(SerialRXBuffer + (8 * i), 8);
-	//	delay(1);
-	//}
-
 		for (int i = 0; i < AX25_FRAME_MAX_SIZE; ++i) {
-			radio.write(&SerialTXBuffer[i], sizeof(uint8));
-			//delay(1);
-			delayMicroseconds(10);
-			//Serial.write(SerialTXBuffer[i]);
 
-			//	Serial.print(SerialTXBuffer[i], HEX);
+			radio.write(&SerialTXBuffer[i], sizeof(uint8)); /* writes Serial RX Buffer to nRF 1 byte at a time */
+
+			// Note: the serial.write and print lines below are deprecated after using nRF Module
+
+			//Serial.write(SerialTXBuffer[i]); // used to write serially to LabVIEW
+			//Serial.print(SerialTXBuffer[i], HEX); // to display array as string in HEX format (mostly used for debugging)
 			//Serial.flush();
 	}
 		flag_SerialTXBuffer = EMPTY;
 		radio.startListening();
-		//	Serial.print("\n\n");
 	}
 }
 
 void readFrameFromSerial() {
-	uint8 flag_flagAndDestMatchSerialRXBuffer = SET; /* init value as set */
+	uint8 flag_flagAndDestMatchSerialRXBuffer = SET; /* init value as set (do not change init value, changing it will cause unwanted behavior)*/
 	uint8 flagAndDestAddress[8] = { 0x7e, 'O', 'N', '4', 'U', 'L', 'G', 0x60 };
 
 #ifdef SerialWire
@@ -183,6 +175,42 @@ void readFrameFromSerial() {
 
 #ifndef SerialWire
 	//todo:write here code to read from nrf and take care about flags
+
+	if (radio.available() && flag_SerialRXBuffer == EMPTY) {
+		g_infoSize = SSP_FRAME_MAX_SIZE;
+
+
+
+
+		  //Read the data if available in buffer
+		  unsigned char text[1] = {0};
+		  for (int j = 0; j < 8; j++) {
+		    while (!(radio.available()));
+		    radio.read(&text, sizeof(text));
+		    SerialRXBuffer[j] = text[0];
+		  }
+
+		for (uint8 i = 0; i < 8; i++) {
+			if (SerialRXBuffer[i] != flagAndDestAddress[i]) {
+				flag_flagAndDestMatchSerialRXBuffer = CLEAR;
+			}
+		}
+
+		if (flag_flagAndDestMatchSerialRXBuffer == SET) {
+
+			  //Read the data if available in buffer
+			  unsigned char text_2[1] = {0};
+			  for (int j = 8; j < 256; j++) {
+			    while (!(radio.available()));
+			    radio.read(&text_2, sizeof(text_2));
+			    SerialRXBuffer[j] = text_2[0];
+			  }
+
+//			delay(100);
+			flag_SerialRXBuffer = FULL;
+			Serial.flush();
+		}
+	}
 #endif
 }
 
@@ -197,6 +225,9 @@ void setup() {
 	  radio.openWritingPipe(address);
 
 	  radio.openReadingPipe(0, address);
+
+	 // radio.setPayloadSize(8);
+
 	  //Set module as transmitter
 	  radio.stopListening();
 
