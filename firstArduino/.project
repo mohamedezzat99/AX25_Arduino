@@ -41,5 +41,15 @@
 			<type>2</type>
 			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.8.4/variants/standard</locationURI>
 		</link>
+		<link>
+			<name>libraries/RF24</name>
+			<type>2</type>
+			<location>C:/Users/Mohamed Ezzat/Documents/Arduino/libraries/RF24</location>
+		</link>
+		<link>
+			<name>libraries/SPI</name>
+			<type>2</type>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.8.4/libraries/SPI</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>

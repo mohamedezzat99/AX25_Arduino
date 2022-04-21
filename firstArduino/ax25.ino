@@ -179,7 +179,7 @@ void AX25_Manager(uint8 *a_control) {
 			for (i = 0; i < ADDR_LEN; i++) {
 				if (g_received_address[i] != myAddress[i]) {
 					notMyAddress = SET;	/* set the flag to show the address is not ours */
-					Serial1.print("\n Address is NOT ours \n");
+				//	Serial1.print("\n Address is NOT ours \n");
 					flag_Deframing_to_Control = EMPTY; /* clears Buffer in case address is not ours */
 					break; /* breaks as soon as it finds a difference in the address */
 				}
@@ -282,7 +282,7 @@ void AX25_Manager(uint8 *a_control) {
 					flag_Status = REJECT;
 
 					if (rejCounter == 2) {
-						Serial1.print("\n Reject Counter Reached 3 so frame is skipped \n");
+			//			Serial1.print("\n Reject Counter Reached 3 so frame is skipped \n");
 						flag_Status = ACCEPT; /* this means that the frame sent was skipped but treat it as accepted*/
 						flag_SSP_to_Control = EMPTY;
 						incrementStateVar(&VS);

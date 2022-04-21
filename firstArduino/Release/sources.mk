@@ -37,4 +37,6 @@ CPP_DEPS :=
 SUBDIRS := \
 . \
 core\core \
+libraries\RF24 \
+libraries\SPI\src \
 

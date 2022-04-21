@@ -16097,3 +16097,525 @@ Total                      39159
 
 'Finished building target: firstArduino'
 ' '
+13:35:15 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections,--relax -mmcu=atmega2560   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                        382   8389120
+.text                       4234         0
+.bss                        1335   8389502
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               232         0
+.debug_info                13009         0
+.debug_abbrev               4508         0
+.debug_line                 4303         0
+.debug_frame                 904         0
+.debug_str                  3407         0
+.debug_loc                  6786         0
+.debug_ranges                272         0
+Total                      39453
+
+
+'Finished building target: firstArduino'
+' '
+21:52:45 **** Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+In file included from ..\sloeber.ino.cpp:36:0:
+..\firstArduino.ino: In function 'void setup()':
+..\firstArduino.ino:215:2: error: 'Serial1' was not declared in this scope
+  Serial1.begin(9600);
+  ^~~~~~~
+..\firstArduino.ino:215:2: note: suggested alternative: 'Serial'
+  Serial1.begin(9600);
+  ^~~~~~~
+  Serial
+In file included from ..\sloeber.ino.cpp:39:0:
+..\ax25.ino: In function 'void AX25_Manager(uint8*)':
+..\ax25.ino:182:6: error: 'Serial1' was not declared in this scope
+      Serial1.print("\n Address is NOT ours \n");
+      ^~~~~~~
+..\ax25.ino:182:6: note: suggested alternative: 'Serial'
+      Serial1.print("\n Address is NOT ours \n");
+      ^~~~~~~
+      Serial
+..\ax25.ino:285:7: error: 'Serial1' was not declared in this scope
+       Serial1.print("\n Reject Counter Reached 3 so frame is skipped \n");
+       ^~~~~~~
+..\ax25.ino:285:7: note: suggested alternative: 'Serial'
+       Serial1.print("\n Reject Counter Reached 3 so frame is skipped \n");
+       ^~~~~~~
+       Serial
+make: *** [subdir.mk:20: sloeber.ino.cpp.o] Error 1
+"D:/Downloads/Sloeber/arduinoPlugin/tools/make/make all" terminated with exit code 2. Build might be incomplete.
+21:53:23 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src\SPI.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"libraries\SPI\src\SPI.cpp.d" -MT"libraries\SPI\src\SPI.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src\SPI.cpp"   -o "libraries\SPI\src\SPI.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src\SPI.cpp'
+' '
+'Building file: C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\RF24.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"libraries\RF24\RF24.cpp.d" -MT"libraries\RF24\RF24.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\RF24.cpp"   -o "libraries\RF24\RF24.cpp.o"
+'Finished building: C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\RF24.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\CDC.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\CDC.cpp.d" -MT"core\core\CDC.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\CDC.cpp"   -o "core\core\CDC.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\CDC.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\HardwareSerial.cpp.d" -MT"core\core\HardwareSerial.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial.cpp"   -o "core\core\HardwareSerial.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial0.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\HardwareSerial0.cpp.d" -MT"core\core\HardwareSerial0.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial0.cpp"   -o "core\core\HardwareSerial0.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial0.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial1.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\HardwareSerial1.cpp.d" -MT"core\core\HardwareSerial1.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial1.cpp"   -o "core\core\HardwareSerial1.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial1.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial2.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\HardwareSerial2.cpp.d" -MT"core\core\HardwareSerial2.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial2.cpp"   -o "core\core\HardwareSerial2.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial2.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial3.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\HardwareSerial3.cpp.d" -MT"core\core\HardwareSerial3.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial3.cpp"   -o "core\core\HardwareSerial3.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\HardwareSerial3.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\IPAddress.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\IPAddress.cpp.d" -MT"core\core\IPAddress.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\IPAddress.cpp"   -o "core\core\IPAddress.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\IPAddress.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\PluggableUSB.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\PluggableUSB.cpp.d" -MT"core\core\PluggableUSB.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\PluggableUSB.cpp"   -o "core\core\PluggableUSB.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\PluggableUSB.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\Print.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\Print.cpp.d" -MT"core\core\Print.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\Print.cpp"   -o "core\core\Print.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\Print.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\Stream.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\Stream.cpp.d" -MT"core\core\Stream.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\Stream.cpp"   -o "core\core\Stream.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\Stream.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\Tone.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\Tone.cpp.d" -MT"core\core\Tone.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\Tone.cpp"   -o "core\core\Tone.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\Tone.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\USBCore.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\USBCore.cpp.d" -MT"core\core\USBCore.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\USBCore.cpp"   -o "core\core\USBCore.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\USBCore.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\WInterrupts.c'
+'Starting C compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -c -g -Os -w -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\WInterrupts.c.d" -MT"core\core\WInterrupts.c.o" -D__IN_ECLIPSE__=1 "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\WInterrupts.c"   -o "core\core\WInterrupts.c.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\WInterrupts.c'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\WMath.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\WMath.cpp.d" -MT"core\core\WMath.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\WMath.cpp"   -o "core\core\WMath.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\WMath.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\WString.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\WString.cpp.d" -MT"core\core\WString.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\WString.cpp"   -o "core\core\WString.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\WString.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\abi.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\abi.cpp.d" -MT"core\core\abi.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\abi.cpp"   -o "core\core\abi.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\abi.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\hooks.c'
+'Starting C compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -c -g -Os -w -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\hooks.c.d" -MT"core\core\hooks.c.o" -D__IN_ECLIPSE__=1 "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\hooks.c"   -o "core\core\hooks.c.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\hooks.c'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\main.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\main.cpp.d" -MT"core\core\main.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\main.cpp"   -o "core\core\main.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\main.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\new.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\new.cpp.d" -MT"core\core\new.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\new.cpp"   -o "core\core\new.cpp.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\new.cpp'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring.c'
+'Starting C compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -c -g -Os -w -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\wiring.c.d" -MT"core\core\wiring.c.o" -D__IN_ECLIPSE__=1 "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring.c"   -o "core\core\wiring.c.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring.c'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_analog.c'
+'Starting C compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -c -g -Os -w -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\wiring_analog.c.d" -MT"core\core\wiring_analog.c.o" -D__IN_ECLIPSE__=1 "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_analog.c"   -o "core\core\wiring_analog.c.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_analog.c'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_digital.c'
+'Starting C compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -c -g -Os -w -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\wiring_digital.c.d" -MT"core\core\wiring_digital.c.o" -D__IN_ECLIPSE__=1 "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_digital.c"   -o "core\core\wiring_digital.c.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_digital.c'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_pulse.S'
+'Starting S compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -c -g -x assembler-with-cpp -flto -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\wiring_pulse.S.d" -MT"core\core\wiring_pulse.S.o"  "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_pulse.S"   -o "core\core\wiring_pulse.S.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_pulse.S'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_pulse.c'
+'Starting C compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -c -g -Os -w -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\wiring_pulse.c.d" -MT"core\core\wiring_pulse.c.o" -D__IN_ECLIPSE__=1 "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_pulse.c"   -o "core\core\wiring_pulse.c.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_pulse.c'
+' '
+'Building file: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_shift.c'
+'Starting C compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -c -g -Os -w -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"core\core\wiring_shift.c.d" -MT"core\core\wiring_shift.c.o" -D__IN_ECLIPSE__=1 "D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_shift.c"   -o "core\core\wiring_shift.c.o"
+'Finished building: D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino\wiring_shift.c'
+' '
+'Starting archiver'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc-ar" rcs     E:\myFirstSloeber\firstArduino\Release/arduino.ar  .\core\core\CDC.cpp.o .\core\core\HardwareSerial.cpp.o .\core\core\HardwareSerial0.cpp.o .\core\core\HardwareSerial1.cpp.o .\core\core\HardwareSerial2.cpp.o .\core\core\HardwareSerial3.cpp.o .\core\core\IPAddress.cpp.o .\core\core\PluggableUSB.cpp.o .\core\core\Print.cpp.o .\core\core\Stream.cpp.o .\core\core\Tone.cpp.o .\core\core\USBCore.cpp.o .\core\core\WInterrupts.c.o .\core\core\WMath.cpp.o .\core\core\WString.cpp.o .\core\core\abi.cpp.o .\core\core\hooks.c.o .\core\core\main.cpp.o .\core\core\new.cpp.o .\core\core\wiring.c.o .\core\core\wiring_analog.c.o .\core\core\wiring_digital.c.o .\core\core\wiring_pulse.S.o .\core\core\wiring_pulse.c.o .\core\core\wiring_shift.c.o 
+'Finished building: E:\myFirstSloeber\firstArduino\Release\arduino.ar'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o  .\libraries\SPI\src\SPI.cpp.o  .\libraries\RF24\RF24.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                         74   8388864
+.text                       5046         0
+.bss                        1212   8388938
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               200         0
+.debug_info                18482         0
+.debug_abbrev               3539         0
+.debug_line                 5209         0
+.debug_frame                1056         0
+.debug_str                  4342         0
+.debug_loc                  9663         0
+.debug_ranges                416         0
+Total                      49320
+
+
+'Finished building target: firstArduino'
+' '
+22:10:05 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o  .\libraries\SPI\src\SPI.cpp.o  .\libraries\RF24\RF24.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                         74   8388864
+.text                       5046         0
+.bss                        1212   8388938
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               200         0
+.debug_info                18482         0
+.debug_abbrev               3539         0
+.debug_line                 5209         0
+.debug_frame                1056         0
+.debug_str                  4342         0
+.debug_loc                  9663         0
+.debug_ranges                416         0
+Total                      49320
+
+
+'Finished building target: firstArduino'
+' '
+22:38:13 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o  .\libraries\SPI\src\SPI.cpp.o  .\libraries\RF24\RF24.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                         74   8388864
+.text                       5056         0
+.bss                        1212   8388938
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               200         0
+.debug_info                18512         0
+.debug_abbrev               3539         0
+.debug_line                 5216         0
+.debug_frame                1056         0
+.debug_str                  4342         0
+.debug_loc                  9587         0
+.debug_ranges                416         0
+Total                      49291
+
+
+'Finished building target: firstArduino'
+' '
+22:40:38 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o  .\libraries\SPI\src\SPI.cpp.o  .\libraries\RF24\RF24.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                         74   8388864
+.text                       5044         0
+.bss                        1212   8388938
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               200         0
+.debug_info                18482         0
+.debug_abbrev               3539         0
+.debug_line                 5210         0
+.debug_frame                1056         0
+.debug_str                  4342         0
+.debug_loc                  9587         0
+.debug_ranges                416         0
+Total                      49243
+
+
+'Finished building target: firstArduino'
+' '
+22:42:39 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o  .\libraries\SPI\src\SPI.cpp.o  .\libraries\RF24\RF24.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                         74   8388864
+.text                       5044         0
+.bss                        1212   8388938
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               200         0
+.debug_info                18482         0
+.debug_abbrev               3539         0
+.debug_line                 5210         0
+.debug_frame                1056         0
+.debug_str                  4342         0
+.debug_loc                  9587         0
+.debug_ranges                416         0
+Total                      49243
+
+
+'Finished building target: firstArduino'
+' '
+22:43:59 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o  .\libraries\SPI\src\SPI.cpp.o  .\libraries\RF24\RF24.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                         74   8388864
+.text                       5046         0
+.bss                        1212   8388938
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               200         0
+.debug_info                18483         0
+.debug_abbrev               3539         0
+.debug_line                 5210         0
+.debug_frame                1056         0
+.debug_str                  4342         0
+.debug_loc                  9663         0
+.debug_ranges                416         0
+Total                      49322
+
+
+'Finished building target: firstArduino'
+' '
+22:48:08 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o  .\libraries\SPI\src\SPI.cpp.o  .\libraries\RF24\RF24.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                         74   8388864
+.text                       5054         0
+.bss                        1212   8388938
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               200         0
+.debug_info                18528         0
+.debug_abbrev               3549         0
+.debug_line                 5218         0
+.debug_frame                1056         0
+.debug_str                  4342         0
+.debug_loc                  9704         0
+.debug_ranges                464         0
+Total                      49482
+
+
+'Finished building target: firstArduino'
+' '
+02:52:11 **** Incremental Build of configuration Release for project firstArduino ****
+"D:\\Downloads\\Sloeber\\arduinoPlugin\\tools\\make\\make" all 
+'Building file: ..\sloeber.ino.cpp'
+'Starting C++ compile'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-g++" -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10812 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\variants\standard" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\cores\arduino" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24" -I"C:\Users\Mohamed Ezzat\Documents\Arduino\libraries\RF24\utility" -I"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\hardware\avr\1.8.4\libraries\SPI\src" -MMD -MP -MF"sloeber.ino.cpp.d" -MT"sloeber.ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "..\sloeber.ino.cpp"   -o "sloeber.ino.cpp.o"
+'Finished building: ..\sloeber.ino.cpp'
+' '
+'Starting combiner'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-gcc" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p   -o "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"    .\sloeber.ino.cpp.o  .\libraries\SPI\src\SPI.cpp.o  .\libraries\RF24\RF24.cpp.o     E:\myFirstSloeber\firstArduino\Release/arduino.ar  "-LE:\myFirstSloeber\firstArduino\Release" -lm
+'Finished building: firstArduino.elf'
+' '
+'Do all objcopy commands'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.eep"
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy" -O ihex -R .eeprom  "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf" "E:\myFirstSloeber\firstArduino\Release/firstArduino.hex"
+'Finished building: firstArduino.hex'
+' '
+'Building target: firstArduino'
+'Printing size:'
+"D:\Downloads\Sloeber\arduinoPlugin\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7/bin/avr-size" -A "E:\myFirstSloeber\firstArduino\Release/firstArduino.elf"
+E:\myFirstSloeber\firstArduino\Release/firstArduino.elf  :
+section                     size      addr
+.data                         54   8388864
+.text                       4622         0
+.bss                        1212   8388918
+.comment                      17         0
+.note.gnu.avr.deviceinfo      64         0
+.debug_aranges               200         0
+.debug_info                17259         0
+.debug_abbrev               3474         0
+.debug_line                 4906         0
+.debug_frame                 928         0
+.debug_str                  4210         0
+.debug_loc                  8333         0
+.debug_ranges                424         0
+Total                      45703
+
+
+'Finished building target: firstArduino'
+' '

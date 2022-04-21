@@ -10,14 +10,35 @@
 
 #include "ax25.h"
 
+
+
 /* keep this line when in Arduino is in RX mode, otherwise, comment it out. */
-#define RX_M
+//#define RX_M
 
 /* keep this line when Debugging, otherwise, comment it out. */
-#define DEBUG
+//#define DEBUG
 
 /* used to initiate serial 1 for Arduino MEGA */
 //#define DEBUG_1
+
+
+
+
+//Include nRF Libraries
+#include <SPI.h>
+#include <nRF24L01.h>
+#include <RF24.h>
+
+//create an RF24 object
+RF24 radio(9, 8);  // CE, CSN
+
+//address through which two modules communicate.
+const byte address[6] = "00001";
+
+
+
+
+
 
 uint8 SerialTXBuffer[AX25_FRAME_MAX_SIZE];
 uint8 SerialRXBuffer[AX25_FRAME_MAX_SIZE];
@@ -35,6 +56,7 @@ uint8 flag_SerialRXBuffer = EMPTY;
 uint8 flag_next_frame = EMPTY;
 
 uint8 g_infoSize = 236;  //temp set as 236
+
 
 void serialFlush() {
 	while (Serial.available() > 0) {
@@ -58,13 +80,32 @@ void print_info() {
 
 void printSerialTXBufferToSerial() {
 	if (flag_SerialTXBuffer == FULL) {
+
+		//Send message to receiver
+			  //const char text[] = "Hello World";
+		radio.stopListening();
+			// delay(1000);
+
+
+
+
+	//for (uint8 i = 0; i < 31; i++) {
+		//radio.write(&SerialTXBuffer[i], sizeof(uint8));
+		//radio.write(SerialRXBuffer + (8 * i), 8);
+	//	delay(1);
+	//}
+
 		for (int i = 0; i < AX25_FRAME_MAX_SIZE; ++i) {
-			Serial.write(SerialTXBuffer[i]);
+			radio.write(&SerialTXBuffer[i], sizeof(uint8));
+			//delay(1);
+			delayMicroseconds(10);
+			//Serial.write(SerialTXBuffer[i]);
 
 			//	Serial.print(SerialTXBuffer[i], HEX);
-			Serial.flush();
-		}
+			//Serial.flush();
+	}
 		flag_SerialTXBuffer = EMPTY;
+		radio.startListening();
 		//	Serial.print("\n\n");
 	}
 }
@@ -72,6 +113,8 @@ void printSerialTXBufferToSerial() {
 void readFrameFromSerial() {
 	uint8 flag_flagAndDestMatchSerialRXBuffer = SET; /* init value as set */
 	uint8 flagAndDestAddress[8] = { 0x7e, 'O', 'N', '4', 'U', 'L', 'G', 0x60 };
+
+#ifdef SerialWire
 
 	if (Serial.available() && flag_SerialRXBuffer == EMPTY) {
 		g_infoSize = SSP_FRAME_MAX_SIZE;
@@ -135,14 +178,58 @@ void readFrameFromSerial() {
 
 		}
 	}
+#endif
+
+
+#ifndef SerialWire
+	//todo:write here code to read from nrf and take care about flags
+#endif
 }
 
 void setup() {
 	// put your setup code here, to run once:
+
+#ifndef RX_M
+
+	radio.begin();
+
+	  //set the address
+	  radio.openWritingPipe(address);
+
+	  radio.openReadingPipe(0, address);
+	  //Set module as transmitter
+	  radio.stopListening();
+
+
+#endif
+
+
+#ifdef RX_M
+
+
+	  while (!Serial);
+	     Serial.begin(9600);
+
+	   radio.begin();
+
+	   //set the address
+	   radio.openReadingPipe(0, address);
+
+	   //Set module as receiver
+	   radio.startListening();
+
+#endif
+
+
+
+
+
+
+
 	Serial.begin(9600);
 
 
-	Serial1.begin(9600);
+//	Serial1.begin(9600);
 
 	/* if we connect as RX remove this part */
 #ifndef RX_M
@@ -188,11 +275,23 @@ void loop() {
 				g_infoSize);
 	}
 
-	/* Prints Serial TX buffer */
+	/* Prints Serial TX buffer (and now sends frame to nRF) */
 	printSerialTXBufferToSerial();
+
+
 
 	/* Gets frame from serial */
 	readFrameFromSerial();
+
+	//Read the data if available in buffer
+//	  if (radio.available())
+//	  {
+//	    char text[32] = {0};
+//	    radio.read(&text, sizeof(text));
+//	    Serial.println(text);
+//	  }
+
+
 	//serialFlush();
 
 	/* Calls the de-framing function */

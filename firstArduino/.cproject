@@ -18,23 +18,32 @@
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="io.sloeber.targetplatform.1101427760" name="Arduino Target" osList="all" superClass="io.sloeber.targetplatform"/>
 							<builder buildPath="${workspace_loc:/firstArduino}/Release" id="io.sloeber.sketch.builder.2055529358" keepEnvironmentInBuildfile="false" name="Arduino sketch builder" parallelBuildOn="false" superClass="io.sloeber.sketch.builder"/>
 							<tool id="io.sloeber.tool.sketch.compiler.cpp.741506474" name="Arduino C++ Compiler" superClass="io.sloeber.tool.sketch.compiler.cpp">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.cpp.sketch.option.incpath.214780045" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.cpp.sketch.option.incpath.214780045" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/libraries/RF24}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/libraries/RF24/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/libraries/SPI/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.cpp.sketch.input.1205025588" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
 							<tool id="io.sloeber.tool.compiler.c.441629217" name="Arduino C Compiler" superClass="io.sloeber.tool.compiler.c">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.c.sketch.option.incpath.2030342037" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.c.sketch.option.incpath.2030342037" name="Include Paths (-I)" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/libraries/RF24}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/libraries/RF24/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/libraries/SPI/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.c.sketch.input.569502324" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
 							<tool id="io.sloeber.tool.sketch.compiler.s.1487137271" name="Arduino Assembler" superClass="io.sloeber.tool.sketch.compiler.s">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.asm.sketch.option.incpath.380594395" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="io.sloeber.compiler.asm.sketch.option.incpath.380594395" name="Include Paths (-I)" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/libraries/RF24}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/libraries/RF24/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/firstArduino/libraries/SPI/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.S.sketch.input.1057669872" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>
@@ -75,7 +84,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries/**/._*|libraries/?*/utility/*/*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="libraries/RF24/pyRF24|libraries/RF24/images|libraries/RF24/examples_pico|libraries/RF24/examples_linux|libraries/RF24/docs|libraries/RF24/datasheets|libraries/RF24/cmake|libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries/**/._*|libraries/?*/utility/*/*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
