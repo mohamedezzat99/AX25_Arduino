@@ -26,9 +26,7 @@
 
 /* used to initiate serial 1 for Arduino MEGA */
 //#define DEBUG_1
-
 /*-------------Settings---------- */
-
 
 //create an RF24 object
 RF24 radio(9, 8);  // CE, CSN
@@ -74,9 +72,9 @@ void print_info() {
 }
 
 /*
- * this function handles the flag_SerialTXBuffer flag.
- *
- * */
+ * Description: prints the data stored in SerialTXBuffer to Serial or nRF
+ * flags: flag_SerialTXBuffer flag.
+ */
 void printSerialTXBufferToSerial() {
 	if (flag_SerialTXBuffer == FULL) {
 
@@ -87,7 +85,7 @@ void printSerialTXBufferToSerial() {
 
 			// Note: the serial.write and print lines below are deprecated after using nRF Module
 
-			//Serial.write(SerialTXBuffer[i]); // used to write serially to LabVIEW
+			//Serial.write(SerialTXBuffer[i]); 		// used to write serially to LabVIEW
 			//Serial.print(SerialTXBuffer[i], HEX); // to display array as string in HEX format (mostly used for debugging)
 			//Serial.flush();
 		}
@@ -171,7 +169,6 @@ void readFrameFromSerial() {
 
 	if (radio.available() && flag_SerialRXBuffer == EMPTY) {
 
-
 		g_infoSize = SSP_FRAME_MAX_SIZE;
 
 		//Read the data if available in buffer
@@ -200,7 +197,7 @@ void readFrameFromSerial() {
 				SerialRXBuffer[j] = text_2[0];
 			}
 #ifdef DEBUG
-			for (int i=0; i<256;i++){
+			for (int i = 0; i < 256; i++) {
 				Serial.print(SerialRXBuffer[i], HEX);
 			}
 #endif

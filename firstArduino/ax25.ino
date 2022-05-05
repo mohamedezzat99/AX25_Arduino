@@ -126,14 +126,8 @@ void AX25_Manager(uint8 *a_control) {
 	uint8 Deframing_To_Control_Buffer_Copy[256];
 	static uint8 state = idle;
 	uint8 pollfinal = 0;
-	/* note that when working with labVIEW VS and VR were set to 0 */
-#ifdef RX_M
-	static uint8 VS = 0;
-	static uint8 VR = 0;
-#else
-	static uint8 VS = 0;
-	static uint8 VR = 0;
-#endif
+	static uint8 VS = 0; /* holds the number of the frame to be sent */
+	static uint8 VR = 0; /* holds the number of the frame that is expected to be received */
 	uint8 NS;
 	uint8 NR;
 	uint8 Received_NS;
@@ -152,6 +146,7 @@ void AX25_Manager(uint8 *a_control) {
 	//uint8 flag_Status = ACCEPT;
 	uint8 g_Recieved_NR_1;
 	static uint8 flag_NS_VR; /* flag to indicate if received NS equals VR */
+	uint8 flag_RxFrameType; /* used when node acts as RX, indicates type of received frame (I or S) */
 
 	switch (state) {
 	case idle:
@@ -195,18 +190,21 @@ void AX25_Manager(uint8 *a_control) {
 			received_control = g_control_recived[0]; /* copy the received cntrol byte */
 			if ((received_control & 0x01) == 0) {
 
+				/* indicate that we received an I-Frame so that after idle we go to RX state */
+				flag_RxFrameType = I;
+
 				/* get subfield values from the control byte */
 				g_Received_NR = (received_control & 0xE0) >> 5;
 				Received_NS = (received_control & 0x0E) >> 1;
 				PollFinal = (received_control & 0x10) >> 4;
 
-				/* check if Received NS equals V(R) */
 #ifdef DEBUG
 				Serial.print("\n Received NS = ");
 				Serial.print(Received_NS);
 				Serial.print("\n VR = ");
 				Serial.print(VR);
 #endif
+				/* check if Received NS equals V(R) */
 				if (Received_NS == VR) {
 					flag_NS_VR = SET; /* set flag to indicate that received NS == VR */
 
@@ -215,8 +213,30 @@ void AX25_Manager(uint8 *a_control) {
 					/*TODO: check from Dr. make send REJ */
 					flag_NS_VR = CLEAR;
 					state = RX; /* sets the state to RX in order to send REJ in this case */
-					// flag_Deframing_to_Control = EMPTY; /* Discards Frame */
 				}
+			} else if ((received_control & 0x03) == 0x01) {
+
+				/*todo: check this entire else if from DR. */
+				/* indicate that we received an S-Frame so that we stay in idle mode */
+				flag_RxFrameType = S;
+
+				/* get subfield values from the control byte */
+				g_Received_NR = (received_control & 0xE0) >> 5;
+				Received_PollFinal = (received_control & 0x10) >> 4;
+				Received_Sbits = (received_control & 0x0C) >> 2;
+
+				/* reset to 0 when > 7 */
+				g_Recieved_NR_1 = g_Received_NR - 1;
+				if (g_Recieved_NR_1 > 7) {
+					g_Recieved_NR_1 = 7;
+				}
+
+				/* checks if the received frame has correct order and is of ACK type (RR or RNR) */
+				if ((g_Recieved_NR_1) == VS
+						&& (Received_Sbits == RR || Received_Sbits == RNR)) {
+					incrementStateVar(&VR);
+				}
+				flag_Deframing_to_Control = EMPTY;
 			}
 
 			if (notMyAddress != SET && flag_NS_VR == SET) { /*continues if the address is ours and the number of frame is what is expected*/
@@ -225,7 +245,11 @@ void AX25_Manager(uint8 *a_control) {
 					Control_To_SSP[i] = g_info_reciver[i];
 				}
 
-				state = RX; /* sets the state to RX */
+				if (flag_RxFrameType == I) {
+					state = RX; /* sets the state to RX */
+				} else if (flag_RxFrameType == S) {
+					state = idle;
+				}
 			}
 		}
 		break;
@@ -261,7 +285,7 @@ void AX25_Manager(uint8 *a_control) {
 				Received_Sbits = (received_control & 0x0C) >> 2;
 
 				/* in case the received NR is 0 this means that we ack frames up to 7 from previous window */
-				g_Recieved_NR_1 = g_Received_NR-1;
+				g_Recieved_NR_1 = g_Received_NR - 1;
 				if (g_Recieved_NR_1 > 7) {
 					g_Recieved_NR_1 = 7;
 				}
@@ -330,7 +354,7 @@ void AX25_Manager(uint8 *a_control) {
 
 		/* Generate Required Control Byte */
 		NS = VS;
-		NR = VR;
+		NR = VR + 1;
 		incrementStateVar(&VS);
 
 		/* check on CRC flag (in de-frame function) if True make RR if False make REJ */
