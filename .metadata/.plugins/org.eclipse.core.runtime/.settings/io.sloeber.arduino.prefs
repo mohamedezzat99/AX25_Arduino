@@ -1,7 +1,7 @@
 Automatically\ import\ libraries=true
-FbStatus=566
-FsStatus=77
-FuStatus=437
+FbStatus=654
+FsStatus=84
+FuStatus=508
 Last\ Used\ Upload\ port=COM3
 Last\ used\ Board=uno
 Last\ used\ Boards\ file=${SLOEBER_HOME}\\arduinoPlugin\\packages\\arduino\\hardware\\avr\\1.8.4\\boards.txt

@@ -165,7 +165,7 @@ void readFrameFromSerial() {
 #endif
 
 #ifndef SerialWire
-	//todo:write here code to read from nrf and take care about flags
+	/* code to read from nrf  */
 
 	if (radio.available() && flag_SerialRXBuffer == EMPTY) {
 

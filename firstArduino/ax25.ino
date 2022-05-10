@@ -142,11 +142,11 @@ void AX25_Manager(uint8 *a_control) {
 	uint8 myAddress[ADDR_LEN] = { 'O', 'N', '4', 'U', 'L', 'G', 0x60, 'O', 'U',
 			'F', 'T', 'I', '1', 0x61 };
 	uint8 notMyAddress = CLEAR;
-	uint8 Control_To_SSP[236];
+	uint8 Control_To_SSP[236]; /*todo: hana moved this line */
 	//uint8 flag_Status = ACCEPT;
 	uint8 g_Recieved_NR_1;
 	static uint8 flag_NS_VR; /* flag to indicate if received NS equals VR */
-	uint8 flag_RxFrameType; /* used when node acts as RX, indicates type of received frame (I or S) */
+	uint8 flag_RxFrameType; /* used when node acts as RX, indicates type of received frame (I or S) */ /*todo: hana */
 
 	switch (state) {
 	case idle:
@@ -207,7 +207,6 @@ void AX25_Manager(uint8 *a_control) {
 				/* check if Received NS equals V(R) */
 				if (Received_NS == VR) {
 					flag_NS_VR = SET; /* set flag to indicate that received NS == VR */
-
 				} else {
 
 					/*TODO: check from Dr. make send REJ */
